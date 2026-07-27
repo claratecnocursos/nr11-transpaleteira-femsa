@@ -15800,7 +15800,7 @@
     });
 
     /* ── TUTORIAL MODAL (recarregar na capa — página 1) ── */
-    const TUTORIAL_VIMEO_ID = '1203899461';
+    const TUTORIAL_YOUTUBE_ID = 'JyGwjc0KLNc';
 
     function updateTutorialButtonVisibility() {
       const item = document.getElementById('tutorial-control-item');
@@ -15811,25 +15811,16 @@
     function openTutorialModal() {
       const modal = document.getElementById('tutorialModal');
       const iframe = document.getElementById('tutorialVideoIframe');
-      if (!modal || !iframe || !TUTORIAL_VIMEO_ID) return;
+      if (!modal || !iframe || !TUTORIAL_YOUTUBE_ID) return;
 
       if (!iframe.getAttribute('src')) {
-        iframe.src = 'https://player.vimeo.com/video/' + TUTORIAL_VIMEO_ID
-          + '?badge=0&autopause=0&title=0&byline=0&portrait=0&dnt=1&app_id=58479';
+        iframe.src = 'https://www.youtube.com/embed/' + TUTORIAL_YOUTUBE_ID
+          + '?rel=0';
       }
 
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
-
-      const bootTutorialPlayer = () => {
-        if (typeof Vimeo === 'undefined') {
-          setTimeout(bootTutorialPlayer, 200);
-          return;
-        }
-        setupVimeoIframe(iframe);
-      };
-      bootTutorialPlayer();
     }
 
     function closeTutorialModal() {
@@ -15837,8 +15828,7 @@
       const iframe = document.getElementById('tutorialVideoIframe');
       if (!modal) return;
 
-      const player = iframe ? vimeoPlayers.get(iframe) : null;
-      if (player) player.pause().catch(() => { });
+      if (iframe) iframe.setAttribute('src', '');
 
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
@@ -15852,7 +15842,7 @@
 
     function tryShowTutorialModal() {
       if (currentSlide !== 0) return;
-      if (!TUTORIAL_VIMEO_ID) return;
+      if (!TUTORIAL_YOUTUBE_ID) return;
       setTimeout(openTutorialModal, 600);
     }
 
