@@ -12221,6 +12221,7 @@
             display: flex; align-items: center; justify-content: center;
             padding: 10px clamp(16px,3vw,32px) 96px;
             overflow-y: auto;
+            container-type: size;
           }
           .m3g-wrap {
             width: 100%; max-width: min(700px, 94vw);
@@ -12369,35 +12370,43 @@
           #s-mod3-game .m3g-wrap {
             flex-shrink: 0;
             width: 100%;
-            max-width: 640px;
+            max-width: clamp(360px, 68cqw, 860px);
             margin: 0 auto;
           }
           #s-mod3-game #m3g-intro {
-            padding: 32px 24px 36px;
+            padding: clamp(24px,10cqh,64px) clamp(24px,6cqw,48px) !important;
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(23,195,178,0.28);
-            border-radius: 24px;
+            border-radius: clamp(16px,3cqw,26px);
             box-shadow: 0 28px 64px rgba(0,0,0,0.4);
+            box-sizing: border-box;
           }
           #s-mod3-game #m3g-result {
             background: rgba(255,255,255,0.04) !important;
             border: 1px solid rgba(23,195,178,0.28) !important;
-            border-radius: 24px !important;
+            border-radius: clamp(16px,3cqw,26px) !important;
             box-shadow: 0 28px 64px rgba(0,0,0,0.4) !important;
+            box-sizing: border-box;
+            padding: clamp(24px,10cqh,64px) clamp(24px,6cqw,48px) !important;
           }
-          @media (min-width: 768px) {
-            #s-mod3-game .m3g-wrap { max-width: 700px; }
-            #s-mod3-game #m3g-intro {
-              padding: 52px 64px 56px;
-              border-radius: 32px;
-            }
-            #s-mod3-game #m3g-intro .ic-circle {
-              width: 132px !important; height: 132px !important;
-              font-size: 64px !important; margin-bottom: 32px !important;
-            }
-            #s-mod3-game #m3g-intro h3 { font-size: 40px !important; margin-bottom: 20px !important; }
-            #s-mod3-game #m3g-intro p  { font-size: 20px !important; margin-bottom: 40px !important; }
-            #s-mod3-game #m3g-intro .btn-start { padding: 20px 56px !important; font-size: 18px !important; }
+          #s-mod3-game #m3g-intro .ic-circle {
+            width: clamp(64px,20cqh,120px) !important;
+            height: clamp(64px,20cqh,120px) !important;
+            font-size: clamp(32px,10cqh,60px) !important;
+            margin: 0 auto clamp(20px,7cqh,44px) !important;
+          }
+          #s-mod3-game #m3g-intro h3 {
+            font-size: clamp(20px,6.5cqh,36px) !important;
+            margin-bottom: clamp(10px,3.5cqh,22px) !important;
+          }
+          #s-mod3-game #m3g-intro p {
+            font-size: clamp(13.5px,3cqh,17px) !important;
+            line-height: 1.5 !important;
+            margin-bottom: clamp(16px,8cqh,52px) !important;
+          }
+          #s-mod3-game #m3g-intro .btn-start {
+            padding: clamp(12px,3cqh,18px) clamp(28px,5cqw,44px) !important;
+            font-size: clamp(13px,2.2cqh,15px) !important;
           }
         </style>
 
@@ -12525,6 +12534,1257 @@
                 title="Conhecendo os Paletes: Duas e Quatro Entradas — NR11 - OPERADOR DE TRANSPALETEIRA">
               </iframe>
             </div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S-MOD4-PALETES: CONTEÚDO — Dois Tipos de Palete ── -->
+      <section class="slide" id="s-mod4-paletes">
+        <style>
+          #s-mod4-paletes .content-area {
+            display: flex; align-items: center; justify-content: center;
+          }
+          #s-mod4-paletes .pal-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: clamp(20px, 3vw, 36px);
+            max-width: 900px;
+            width: 100%;
+            justify-items: center;
+          }
+          #s-mod4-paletes .pal-card {
+            position: relative;
+            display: flex; flex-direction: column; align-items: center; text-align: center;
+            width: 100%; max-width: 360px;
+            padding: clamp(32px,4vh,44px) clamp(22px,3vw,30px) clamp(24px,3vh,30px);
+            border-radius: 26px;
+            background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
+            border: 1px solid rgba(23,195,178,0.28);
+            box-shadow: 0 26px 54px rgba(0,0,0,0.45);
+            transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+          }
+          #s-mod4-paletes .pal-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(23,195,178,0.55);
+            box-shadow: 0 30px 64px rgba(0,0,0,0.5), 0 0 36px rgba(23,195,178,0.18);
+          }
+          #s-mod4-paletes .pal-badge {
+            position: absolute; top: -16px; left: 24px;
+            width: 36px; height: 36px; border-radius: 50%;
+            background: linear-gradient(135deg, #17c3b2, #129588);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-h); font-weight: 900; font-size: 13px; color: #fff;
+            box-shadow: 0 8px 20px rgba(23,195,178,0.5);
+            border: 2px solid var(--black);
+          }
+          #s-mod4-paletes .pal-img-wrap { position: relative; width: 100%; max-width: 240px; }
+          #s-mod4-paletes .pal-img-glow {
+            position: absolute; inset: -20px;
+            background: radial-gradient(circle, rgba(23,195,178,0.3), transparent 70%);
+            filter: blur(14px); z-index: 0;
+          }
+          #s-mod4-paletes .pal-img-box {
+            position: relative; z-index: 1; width: 100%; aspect-ratio: 1/1;
+            background: #ffffff; border-radius: 18px; overflow: hidden;
+            box-shadow: 0 18px 40px rgba(0,0,0,0.4);
+          }
+          #s-mod4-paletes .pal-img-box img {
+            width: 100%; height: 100%; object-fit: contain; padding: 12px; box-sizing: border-box;
+          }
+          #s-mod4-paletes .pal-title-row {
+            margin-top: 16px; display: flex; align-items: center; gap: 8px;
+          }
+          #s-mod4-paletes .pal-icon { font-size: 20px; line-height: 1; }
+          #s-mod4-paletes .pal-title {
+            font-family: var(--font-h); font-weight: 800; font-size: clamp(15px,1.8vw,17px); color: var(--white);
+          }
+          #s-mod4-paletes .pal-caption {
+            margin-top: 8px; font-size: clamp(12px,1.3vw,13px);
+            color: rgba(255,255,255,0.62); line-height: 1.5;
+          }
+          #s-mod4-paletes .pal-underline {
+            margin-top: 16px; height: 3px; width: 44px;
+            background: linear-gradient(90deg, #17c3b2, #4deae0); border-radius: 3px;
+          }
+          @media (max-width: 720px) {
+            #s-mod4-paletes .pal-grid { grid-template-columns: 1fr; max-width: 360px; }
+          }
+        </style>
+
+        <div class="top-bar">
+          <span class="section-tag">🟫 Equipamento</span>
+          <div class="slide-title" style="margin-top:6px">Dois Tipos <span>de Palete</span></div>
+          <div class="slide-subtitle">Movimentação, Cargas e Armazenamento</div>
+        </div>
+
+        <div class="content-area">
+          <div class="pal-grid">
+            <div class="pal-card">
+              <div class="pal-badge">01</div>
+              <div class="pal-img-wrap">
+                <div class="pal-img-glow"></div>
+                <div class="pal-img-box">
+                  <img src="img/PALLET DUAS.png" alt="Palete de Duas Entradas">
+                </div>
+              </div>
+              <div class="pal-title-row">
+                <span class="pal-icon">🔀</span>
+                <div class="pal-title">Palete de Duas Entradas</div>
+              </div>
+              <p class="pal-caption">Aberturas apenas em lados opostos — acesso mais limitado para os garfos da transpaleteira.</p>
+              <div class="pal-underline"></div>
+            </div>
+            <div class="pal-card">
+              <div class="pal-badge">02</div>
+              <div class="pal-img-wrap">
+                <div class="pal-img-glow"></div>
+                <div class="pal-img-box">
+                  <img src="img/PALLET 4.webp" alt="Palete de Quatro Entradas">
+                </div>
+              </div>
+              <div class="pal-title-row">
+                <span class="pal-icon">⛶</span>
+                <div class="pal-title">Palete de Quatro Entradas</div>
+              </div>
+              <p class="pal-caption">Aberturas nos quatro lados — o mais versátil, ideal para corredores estreitos.</p>
+              <div class="pal-underline"></div>
+            </div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S-MOD4-VIDEO3: VÍDEO — Classificação das Cargas no Treinamento ── -->
+      <section class="slide video-slide" id="s-mod4-video3">
+        <div class="top-bar">
+          <div><span class="section-tag">📹 Vídeo</span>
+            <div class="slide-title" style="margin-top:6px">Classificação das Cargas <span>no Treinamento</span></div>
+            <div class="slide-subtitle">Movimentação, Cargas e Armazenamento</div>
+          </div>
+        </div>
+        <div class="content-area" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <div class="video-wrap">
+            <div class="video-box">
+              <iframe id="panda-aca185e5-3852-49eb-9c78-01409c691d61"
+                src="https://player-vz-d35edf2a-8e7.tv.pandavideo.com.br/embed/?v=aca185e5-3852-49eb-9c78-01409c691d61"
+                frameborder="0" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen="true" fetchpriority="high"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+                title="Classificação das Cargas no Treinamento — NR11 - OPERADOR DE TRANSPALETEIRA">
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S-MOD4-VIDEO4: VÍDEO — Regras de Armazenamento e Limites do Piso ── -->
+      <section class="slide video-slide" id="s-mod4-video4">
+        <div class="top-bar">
+          <div><span class="section-tag">📹 Vídeo</span>
+            <div class="slide-title" style="margin-top:6px">Regras de Armazenamento <span>e Limites do Piso</span></div>
+            <div class="slide-subtitle">Movimentação, Cargas e Armazenamento</div>
+          </div>
+        </div>
+        <div class="content-area" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <div class="video-wrap">
+            <div class="video-box">
+              <iframe id="panda-1a8d22fb-e816-4b13-8294-36b95f033f73"
+                src="https://player-vz-d35edf2a-8e7.tv.pandavideo.com.br/embed/?v=1a8d22fb-e816-4b13-8294-36b95f033f73"
+                frameborder="0" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen="true" fetchpriority="high"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+                title="Regras de Armazenamento e Limites do Piso — NR11 - OPERADOR DE TRANSPALETEIRA">
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S-MOD4-GAME: DESAFIO — Turno Relâmpago ── -->
+      <section class="slide" id="s-mod4-game">
+        <style>
+          /* ── Card shell igual ao Módulo 3 ── */
+          #s-mod4-game .content-area {
+            padding-top: 12px !important;
+            padding-bottom: 110px !important;
+            justify-content: center;
+            justify-content: safe center;
+            align-items: center;
+            min-height: 0;
+            flex: 1 1 auto;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            container-type: size;
+          }
+          #s-mod4-game .m4g-wrap {
+            flex-shrink: 0;
+            width: 100%;
+            max-width: clamp(360px, 68cqw, 860px);
+            margin: 0 auto;
+          }
+          #s-mod4-game #m4g-intro {
+            padding: clamp(24px,10cqh,64px) clamp(24px,6cqw,48px) !important;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(23,195,178,0.28);
+            border-radius: clamp(16px,3cqw,26px);
+            box-shadow: 0 28px 64px rgba(0,0,0,0.4);
+            box-sizing: border-box;
+          }
+          #s-mod4-game #m4g-result {
+            background: rgba(255,255,255,0.04) !important;
+            border: 1px solid rgba(23,195,178,0.28) !important;
+            border-radius: clamp(16px,3cqw,26px) !important;
+            box-shadow: 0 28px 64px rgba(0,0,0,0.4) !important;
+            box-sizing: border-box;
+            padding: clamp(24px,10cqh,64px) clamp(24px,6cqw,48px) !important;
+          }
+          #s-mod4-game #m4g-intro .ic-circle {
+            width: clamp(64px,20cqh,120px) !important;
+            height: clamp(64px,20cqh,120px) !important;
+            font-size: clamp(32px,10cqh,60px) !important;
+            margin: 0 auto clamp(20px,7cqh,44px) !important;
+          }
+          #s-mod4-game #m4g-intro h3 {
+            font-size: clamp(20px,6.5cqh,36px) !important;
+            margin-bottom: clamp(10px,3.5cqh,22px) !important;
+          }
+          #s-mod4-game #m4g-intro p {
+            font-size: clamp(13.5px,3cqh,17px) !important;
+            line-height: 1.5 !important;
+            margin-bottom: clamp(16px,8cqh,52px) !important;
+          }
+          #s-mod4-game #m4g-intro .btn-start {
+            padding: clamp(12px,3cqh,18px) clamp(28px,5cqw,44px) !important;
+            font-size: clamp(13px,2.2cqh,15px) !important;
+          }
+
+          #s-mod4-game .m4g-top-row {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 10px; flex-wrap: wrap; gap: 8px;
+          }
+          #s-mod4-game .m4g-counter {
+            font-family: var(--font-h); font-size: 13px; font-weight: 700;
+            color: var(--white); letter-spacing: .04em;
+          }
+          #s-mod4-game .m4g-lives { font-size: 17px; letter-spacing: 3px; }
+          #s-mod4-game .m4g-streak {
+            font-family: var(--font-h); font-size: 12.5px; font-weight: 800;
+            color: #ffb703; align-items: center; gap: 4px; display: none;
+          }
+          #s-mod4-game .m4g-streak.show { display: inline-flex; animation: m4gPop .35s ease; }
+
+          #s-mod4-game .m4g-timer-bg {
+            height: 8px; background: rgba(255,255,255,0.08); border-radius: 4px;
+            overflow: hidden; border: 1px solid rgba(255,255,255,0.12); margin-bottom: 18px;
+          }
+          #s-mod4-game .m4g-timer-fill {
+            height: 100%; width: 100%; background: linear-gradient(90deg,#2ecc71,#27ae60);
+            transition: width .15s linear, background-color .3s ease;
+          }
+
+          #s-mod4-game .m4g-card {
+            background: rgba(255,255,255,0.04); border: 2px solid rgba(255,255,255,0.12);
+            border-radius: 24px; padding: clamp(26px,5vw,38px) clamp(20px,4vw,30px);
+            min-height: 150px; display: flex; flex-direction: column; align-items: center;
+            justify-content: center; text-align: center; box-shadow: 0 24px 48px rgba(0,0,0,.35);
+            margin-bottom: 20px; transition: transform .25s ease, border-color .25s ease;
+          }
+          #s-mod4-game .m4g-card-emoji { font-size: clamp(30px,4.5vw,40px); margin-bottom: 10px; }
+          #s-mod4-game .m4g-card-text {
+            font-family: var(--font-h); font-size: clamp(16px,3.2vw,20px); font-weight: 800;
+            color: var(--cream); line-height: 1.45;
+          }
+          #s-mod4-game .m4g-card.m4g-ok  { border-color: rgba(39,174,96,.6); transform: scale(1.02); }
+          #s-mod4-game .m4g-card.m4g-err { border-color: rgba(231,76,60,.6); animation: m4gShake .4s ease; }
+
+          #s-mod4-game .m4g-answers { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+          #s-mod4-game .m4g-abtn {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            background: rgba(255,255,255,0.03); border: 2px solid rgba(255,255,255,0.12);
+            border-radius: 16px; padding: 20px 14px; color: #fff; font-family: var(--font-h);
+            font-size: 15px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase;
+            transition: all .22s ease; cursor: pointer; width: 100%;
+          }
+          #s-mod4-game .m4g-abtn.m4g-yes:hover:not(:disabled) { background: rgba(40,167,69,.1); border-color: rgba(40,167,69,.55); transform: translateY(-2px); }
+          #s-mod4-game .m4g-abtn.m4g-no:hover:not(:disabled)  { background: rgba(220,53,69,.1); border-color: rgba(220,53,69,.55); transform: translateY(-2px); }
+          #s-mod4-game .m4g-abtn.m4g-correct { background: rgba(40,167,69,.2) !important; border-color: #27ae60 !important; }
+          #s-mod4-game .m4g-abtn.m4g-wrong   { background: rgba(220,53,69,.18) !important; border-color: #e74c3c !important; color: rgba(255,255,255,.7) !important; }
+          #s-mod4-game .m4g-abtn:disabled { opacity: .55; cursor: not-allowed; }
+          #s-mod4-game .m4g-abtn:active:not(:disabled) { transform: scale(0.97); }
+
+          #s-mod4-game .m4g-feedback { min-height: 20px; margin-top: 14px; font-family: var(--font-p); font-size: 14px; text-align: center; }
+          #s-mod4-game .m4g-feedback.ok  { color: #2ecc71; }
+          #s-mod4-game .m4g-feedback.err { color: #e74c3c; }
+
+          #s-mod4-game .m4g-stars { font-size: 34px; letter-spacing: 8px; margin-bottom: 8px; }
+
+          @keyframes m4gShake {
+            10%,90% { transform: translateX(-1px); } 20%,80% { transform: translateX(2px); }
+            30%,50%,70% { transform: translateX(-4px); } 40%,60% { transform: translateX(4px); }
+          }
+          @keyframes m4gPop {
+            0% { transform: scale(0.6); opacity: 0; } 60% { transform: scale(1.15); } 100% { transform: scale(1); opacity: 1; }
+          }
+          @media (max-width: 520px) {
+            #s-mod4-game .m4g-answers { grid-template-columns: 1fr; }
+          }
+        </style>
+
+        <div class="top-bar">
+          <span class="section-tag">🎮 Desafio</span>
+          <div class="slide-title" style="margin-top:6px">Turno <span>Relâmpago</span></div>
+          <div class="slide-subtitle">Movimentação, Cargas e Armazenamento</div>
+        </div>
+
+        <div class="content-area">
+
+          <!-- INTRO -->
+          <div id="m4g-intro" class="m4g-wrap" style="text-align:center; animation: fadeIn 0.8s ease;">
+            <div class="ic-circle" style="margin:0 auto 22px; width:96px; height:96px; font-size:48px;">⚡</div>
+            <h3 style="font-family:var(--font-h); font-size:clamp(22px,3vw,28px); color:var(--white); margin-bottom:12px; font-weight:900;">
+              Desafio Módulo 4 — Turno Relâmpago</h3>
+            <p style="color:rgba(255,255,255,0.72); font-size:clamp(14px,1.8vw,16px); line-height:1.65; margin-bottom:28px; max-width:540px; margin-left:auto; margin-right:auto;">
+              5 afirmações rápidas sobre estabilidade de carga, paletes, tipos de carga e armazenamento.
+              Você tem <strong>12 segundos</strong> e <strong>3 vidas</strong> para responder <strong>Certo</strong> ou <strong>Errado</strong> em cada uma. Acerte em sequência para ganhar combo! 🔥
+            </p>
+            <button class="btn-start" onclick="startM4Game()" style="padding:16px 42px; font-size:15px; text-transform:uppercase;">
+              INICIAR TURNO
+            </button>
+          </div>
+
+          <!-- PLAY -->
+          <div id="m4g-play" class="m4g-wrap" style="display:none;">
+            <div class="m4g-top-row">
+              <span class="m4g-counter" id="m4g-counter">1 / 5</span>
+              <span class="m4g-streak" id="m4g-streak">🔥 <span id="m4g-streak-num">2</span></span>
+              <span class="m4g-lives" id="m4g-lives">❤️❤️❤️</span>
+            </div>
+            <div class="m4g-timer-bg">
+              <div class="m4g-timer-fill" id="m4g-timer-fill"></div>
+            </div>
+            <div class="m4g-card" id="m4g-card">
+              <div class="m4g-card-emoji" id="m4g-emoji">🔍</div>
+              <p class="m4g-card-text" id="m4g-text">...</p>
+            </div>
+            <div class="m4g-answers" id="m4g-answers">
+              <button type="button" class="m4g-abtn m4g-yes" onclick="handleM4Answer(true)">✅ Certo</button>
+              <button type="button" class="m4g-abtn m4g-no" onclick="handleM4Answer(false)">🚫 Errado</button>
+            </div>
+            <div class="m4g-feedback" id="m4g-feedback"></div>
+          </div>
+
+          <!-- RESULT -->
+          <div id="m4g-result" class="m4g-wrap" style="display:none; text-align:center; padding:24px 20px; background:rgba(255,255,255,0.03); border-radius:28px; border:1px solid rgba(255,255,255,0.1); animation:slideUp 0.6s ease;">
+            <div class="m4g-stars" id="m4g-stars">⭐⭐⭐</div>
+            <h3 style="font-family:var(--font-h); font-size:clamp(22px,4vw,28px); color:var(--gold); margin-bottom:8px; font-weight:900;">
+              Turno Encerrado!</h3>
+            <div class="r-status ap" style="display:inline-block; padding:6px 18px; font-size:13px; margin-bottom:14px; font-weight:700;">
+              Módulo 4 — <span id="m4g-score-text">0 / 5</span> acertos</div>
+            <p id="m4g-result-msg" style="color:rgba(255,255,255,0.88); font-size:15px; line-height:1.55; margin-bottom:22px; max-width:480px; margin-left:auto; margin-right:auto;"></p>
+            <button class="btn-retry" onclick="resetM4Game()" style="background:var(--white); color:var(--black); font-weight:800; border-radius:99px; padding:12px 32px;">
+              JOGAR NOVAMENTE</button>
+          </div>
+
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── MÓDULO 5 INTRO ── -->
+      <section class="slide mod-intro-slide" id="s-mod5">
+        <div class="content-area mod-intro-area">
+          <div class="mod-intro-inner">
+            <div class="mod-intro-badge">Início do Módulo</div>
+            <div class="mod-intro-title">MÓDULO 5</div>
+            <div class="mod-intro-sub">Manutenção e Segurança com Baterias</div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,65 C360,20 720,90 1080,40 C1260,15 1390,70 1440,60 L1440,100 L0,100 Z"
+              fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S-MOD5-MANUTENCAO: CONTEÚDO — Manutenção e Conservação da Transpaleteira ── -->
+      <section class="slide" id="s-mod5-manutencao">
+        <style>
+          #s-mod5-manutencao .content-area {
+            display: flex; align-items: center; justify-content: center;
+          }
+          #s-mod5-manutencao .m5c-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: clamp(14px, 2.2vw, 24px);
+            width: 100%;
+            max-width: 1080px;
+            margin: 0 auto;
+          }
+          #s-mod5-manutencao .m5c-card {
+            position: relative;
+            background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 22px;
+            padding: clamp(20px,2.6vw,28px) clamp(20px,2.4vw,26px);
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+          }
+          #s-mod5-manutencao .m5c-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            background: var(--m5c-accent);
+          }
+          #s-mod5-manutencao .m5c-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--m5c-accent);
+            box-shadow: 0 20px 44px rgba(0,0,0,0.4);
+          }
+          #s-mod5-manutencao .m5c-num {
+            position: absolute; top: 16px; right: 20px;
+            font-family: var(--font-h); font-size: 13px; font-weight: 800;
+            color: rgba(255,255,255,0.16); letter-spacing: 0.06em;
+          }
+          #s-mod5-manutencao .m5c-icon {
+            width: 54px; height: 54px; border-radius: 16px;
+            background: color-mix(in srgb, var(--m5c-accent) 18%, transparent);
+            border: 1px solid color-mix(in srgb, var(--m5c-accent) 45%, transparent);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 26px; margin-bottom: 16px;
+          }
+          #s-mod5-manutencao .m5c-title {
+            font-family: var(--font-h); font-weight: 800;
+            font-size: clamp(16px,1.7vw,19px); color: var(--white);
+            margin-bottom: 10px; line-height: 1.3;
+          }
+          #s-mod5-manutencao .m5c-text {
+            font-family: var(--font-p); font-size: clamp(13px,1.3vw,14.5px);
+            color: rgba(255,255,255,0.72); line-height: 1.62;
+          }
+          @media (max-width: 760px) {
+            #s-mod5-manutencao .m5c-grid { grid-template-columns: 1fr; }
+          }
+
+          /* ── MOBILE: carrossel com setas (mesmo padrão do Módulo 2) ── */
+          @media screen and (max-width: 768px) and (orientation: portrait) {
+            @keyframes m5cFadeIn {
+              from { opacity: 0; transform: translateY(10px); }
+              to   { opacity: 1; transform: translateY(0); }
+            }
+            #s-mod5-manutencao {
+              display: flex !important; flex-direction: column !important; overflow: hidden !important;
+            }
+            #s-mod5-manutencao .content-area { display: none !important; }
+            #m5c-mobile-section {
+              display: flex !important; flex-direction: column !important;
+              align-items: center !important; justify-content: center !important;
+              flex: 1 1 0 !important; min-height: 0 !important; overflow: hidden !important;
+              padding: 8px 16px 72px !important; width: 100% !important;
+              box-sizing: border-box !important; gap: 14px !important;
+            }
+            #m5c-card-viewport { width: 100%; max-width: 340px; flex-shrink: 0; position: relative; }
+            #m5c-mobile-section .m5c-card {
+              display: none; width: 100% !important; max-width: 100% !important;
+              margin: 0 !important; padding: 34px 24px 28px !important; box-sizing: border-box !important;
+            }
+            #m5c-mobile-section .m5c-card.m5c-active {
+              display: flex !important; flex-direction: column; align-items: center; text-align: center;
+              animation: m5cFadeIn 0.35s ease forwards;
+            }
+            #m5c-mobile-section .m5c-num { top: 14px; right: 18px; }
+            #m5c-mobile-section .m5c-icon { width: 60px !important; height: 60px !important; font-size: 28px !important; }
+            #m5c-mobile-section .m5c-title { font-size: 19px !important; }
+            #m5c-mobile-section .m5c-text { font-size: 14px !important; line-height: 1.6 !important; }
+            #m5c-carousel-nav {
+              display: flex !important; align-items: center; justify-content: center; gap: 20px;
+              flex-shrink: 0; width: 100%; max-width: 300px;
+            }
+            #m5c-dots { display: flex; gap: 7px; align-items: center; justify-content: center; }
+          }
+        </style>
+
+        <div class="top-bar">
+          <span class="section-tag">📘 Conteúdo</span>
+          <div class="slide-title" style="margin-top:6px">Manutenção <span>e Conservação da Transpaleteira</span></div>
+          <div class="slide-subtitle">Manutenção e Segurança com Baterias</div>
+        </div>
+
+        <div class="content-area">
+          <div class="m5c-grid">
+            <div class="m5c-card" style="--m5c-accent:#17c3b2;">
+              <div class="m5c-num">01</div>
+              <div class="m5c-icon">🔧</div>
+              <h3 class="m5c-title">Importância da Manutenção Preventiva</h3>
+              <p class="m5c-text">Com o cuidado constante com o equipamento, é possível evitar falhas inesperadas e aumentar a durabilidade da transpaleteira.</p>
+            </div>
+            <div class="m5c-card" style="--m5c-accent:#ffc837;">
+              <div class="m5c-num">02</div>
+              <div class="m5c-icon">📋</div>
+              <h3 class="m5c-title">Checklist Diário</h3>
+              <p class="m5c-text">Elaboração de um roteiro de inspeção diário, verificando o estado dos pneus, freios, bateria, nível de carga e possíveis vazamentos de fluido.</p>
+            </div>
+            <div class="m5c-card" style="--m5c-accent:#ff9f43;">
+              <div class="m5c-num">03</div>
+              <div class="m5c-icon">⚠️</div>
+              <h3 class="m5c-title">Problemas Comuns</h3>
+              <p class="m5c-text">Identificar e relatar defeitos no sistema elétrico, freios, garfos e outros componentes antes que causem acidentes.</p>
+            </div>
+            <div class="m5c-card" style="--m5c-accent:#e74c3c;">
+              <div class="m5c-num">04</div>
+              <div class="m5c-icon">🛑</div>
+              <h3 class="m5c-title">Ação em Caso de Falhas</h3>
+              <p class="m5c-text">Ao identificar um problema técnico durante a operação, estacione imediatamente o equipamento em local seguro e relate o fato à chefia e à equipe de manutenção.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── MOBILE: carrossel com setas ── -->
+        <div id="m5c-mobile-section" style="display:none;">
+          <div id="m5c-card-viewport">
+            <div class="m5c-card m5c-active" data-idx="0" style="--m5c-accent:#17c3b2;">
+              <div class="m5c-num">01</div>
+              <div class="m5c-icon">🔧</div>
+              <h3 class="m5c-title">Importância da Manutenção Preventiva</h3>
+              <p class="m5c-text">Com o cuidado constante com o equipamento, é possível evitar falhas inesperadas e aumentar a durabilidade da transpaleteira.</p>
+            </div>
+            <div class="m5c-card" data-idx="1" style="--m5c-accent:#ffc837;">
+              <div class="m5c-num">02</div>
+              <div class="m5c-icon">📋</div>
+              <h3 class="m5c-title">Checklist Diário</h3>
+              <p class="m5c-text">Elaboração de um roteiro de inspeção diário, verificando o estado dos pneus, freios, bateria, nível de carga e possíveis vazamentos de fluido.</p>
+            </div>
+            <div class="m5c-card" data-idx="2" style="--m5c-accent:#ff9f43;">
+              <div class="m5c-num">03</div>
+              <div class="m5c-icon">⚠️</div>
+              <h3 class="m5c-title">Problemas Comuns</h3>
+              <p class="m5c-text">Identificar e relatar defeitos no sistema elétrico, freios, garfos e outros componentes antes que causem acidentes.</p>
+            </div>
+            <div class="m5c-card" data-idx="3" style="--m5c-accent:#e74c3c;">
+              <div class="m5c-num">04</div>
+              <div class="m5c-icon">🛑</div>
+              <h3 class="m5c-title">Ação em Caso de Falhas</h3>
+              <p class="m5c-text">Ao identificar um problema técnico durante a operação, estacione imediatamente o equipamento em local seguro e relate o fato à chefia e à equipe de manutenção.</p>
+            </div>
+          </div>
+          <div id="m5c-carousel-nav">
+            <button class="tipos-arrow" id="m5c-prev" aria-label="Anterior" onclick="m5cCarouselNav(-1)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div id="m5c-dots">
+              <div class="tipos-dot active"></div>
+              <div class="tipos-dot"></div>
+              <div class="tipos-dot"></div>
+              <div class="tipos-dot"></div>
+            </div>
+            <button class="tipos-arrow" id="m5c-next" aria-label="Próximo" onclick="m5cCarouselNav(1)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S-MOD5-VIDEO: VÍDEO — Gestão da Carga e Ciclo de Vida da Bateria ── -->
+      <section class="slide video-slide" id="s-mod5-video">
+        <div class="top-bar">
+          <div><span class="section-tag">📹 Vídeo</span>
+            <div class="slide-title" style="margin-top:6px">Gestão da Carga <span>e Ciclo de Vida da Bateria</span></div>
+            <div class="slide-subtitle">Manutenção e Segurança com Baterias</div>
+          </div>
+        </div>
+        <div class="content-area" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <div class="video-wrap">
+            <div class="video-box">
+              <iframe id="panda-dc21b4e7-b9d9-46fc-a25b-a3a11c65bed2"
+                src="https://player-vz-d35edf2a-8e7.tv.pandavideo.com.br/embed/?v=dc21b4e7-b9d9-46fc-a25b-a3a11c65bed2"
+                frameborder="0" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen="true" fetchpriority="high"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+                title="Gestão da Carga e Ciclo de Vida da Bateria — NR11 - OPERADOR DE TRANSPALETEIRA">
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S-MOD5-TROCA-BATERIA: CONTEÚDO — Passo a Passo Troca de Bateria ── -->
+      <section class="slide" id="s-mod5-troca-bateria">
+        <style>
+          #s-mod5-troca-bateria .content-area {
+            display: flex; align-items: center; justify-content: center;
+            container-type: size;
+          }
+          #s-mod5-troca-bateria .m5t-wrap {
+            width: 100%; max-width: 1180px; margin: 0 auto;
+          }
+          #s-mod5-troca-bateria .m5t-row {
+            display: grid;
+            gap: clamp(4px,1.4cqw,16px);
+            margin-bottom: clamp(10px,3cqh,22px);
+          }
+          #s-mod5-troca-bateria .m5t-row:last-of-type { margin-bottom: 0; }
+          #s-mod5-troca-bateria .m5t-step {
+            position: relative;
+            display: flex; flex-direction: column; align-items: center;
+            text-align: center;
+            padding: 0 clamp(2px,0.6cqw,8px);
+          }
+          #s-mod5-troca-bateria .m5t-step:not(:first-child)::before {
+            content: '';
+            position: absolute;
+            left: -50%; width: 100%;
+            top: clamp(20px,9cqh,26px);
+            height: 2px;
+            background: linear-gradient(90deg, rgba(23,195,178,0.9), rgba(23,195,178,0.35));
+            z-index: 0;
+          }
+          #s-mod5-troca-bateria .m5t-node {
+            width: clamp(38px,11cqh,56px); height: clamp(38px,11cqh,56px);
+            border-radius: 50%;
+            background: linear-gradient(135deg, #17c3b2, #0e9285);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-h); font-weight: 900; font-size: clamp(15px,4.4cqh,22px); color: #03201c;
+            box-shadow: 0 6px 16px rgba(23,195,178,0.35);
+            position: relative; z-index: 1; flex-shrink: 0;
+            margin-bottom: clamp(6px,2.4cqh,12px);
+          }
+          #s-mod5-troca-bateria .m5t-icon {
+            font-size: clamp(15px,4.2cqh,21px); margin-right: 5px;
+            display: inline-block; vertical-align: -3px;
+          }
+          #s-mod5-troca-bateria .m5t-title {
+            font-family: var(--font-h); font-weight: 800;
+            font-size: clamp(13px,1.45cqw,16.5px); color: var(--white);
+            margin-bottom: clamp(3px,1cqh,6px); line-height: 1.28;
+            display: block; text-align: center;
+            min-height: 2.6em;
+            width: 100%;
+          }
+          #s-mod5-troca-bateria .m5t-text {
+            font-family: var(--font-p); font-size: clamp(11.5px,1.2cqw,13.5px);
+            color: rgba(255,255,255,0.7); line-height: 1.42;
+            min-height: 2.85em;
+          }
+          #s-mod5-troca-bateria .m5t-callout {
+            margin-top: clamp(12px,3.5cqh,26px);
+            display: flex; align-items: center; justify-content: center; gap: 12px;
+            background: linear-gradient(135deg, rgba(23,195,178,0.14), rgba(23,195,178,0.03));
+            border: 1px solid rgba(23,195,178,0.35);
+            border-radius: 14px;
+            padding: clamp(10px,3cqh,16px) clamp(16px,3cqw,20px);
+          }
+          #s-mod5-troca-bateria .m5t-callout-icon { font-size: clamp(16px,4cqh,22px); flex-shrink: 0; }
+          #s-mod5-troca-bateria .m5t-callout p {
+            font-family: var(--font-h); font-weight: 700; font-size: clamp(13px,1.5cqw,16px); color: var(--white); margin: 0;
+          }
+          @media (max-width: 720px) {
+            #s-mod5-troca-bateria .m5t-row { grid-template-columns: repeat(3, 1fr) !important; }
+            #s-mod5-troca-bateria .m5t-text { display: none; }
+          }
+
+          /* ── MOBILE: carrossel com setas (mesmo padrão do Módulo 2) ── */
+          @media screen and (max-width: 768px) and (orientation: portrait) {
+            @keyframes m5tFadeIn {
+              from { opacity: 0; transform: translateY(10px); }
+              to   { opacity: 1; transform: translateY(0); }
+            }
+            #s-mod5-troca-bateria {
+              display: flex !important; flex-direction: column !important; overflow: hidden !important;
+            }
+            #s-mod5-troca-bateria .content-area { display: none !important; }
+            #m5t-mobile-section {
+              display: flex !important; flex-direction: column !important;
+              align-items: center !important; justify-content: center !important;
+              flex: 1 1 0 !important; min-height: 0 !important; overflow: hidden !important;
+              padding: 8px 16px 72px !important; width: 100% !important;
+              box-sizing: border-box !important; gap: 14px !important;
+            }
+            #m5t-card-viewport { width: 100%; max-width: 340px; flex-shrink: 0; position: relative; }
+            #m5t-mobile-section .m5t-mstep {
+              display: none; width: 100% !important; max-width: 100% !important;
+              margin: 0 !important; padding: 28px 22px !important; box-sizing: border-box !important;
+              background: rgba(255,255,255,0.04); border: 1px solid rgba(23,195,178,0.28);
+              border-radius: 22px; box-shadow: 0 20px 44px rgba(0,0,0,0.4);
+            }
+            #m5t-mobile-section .m5t-mstep.m5t-active {
+              display: flex !important; flex-direction: column; align-items: center; text-align: center;
+              animation: m5tFadeIn 0.35s ease forwards;
+            }
+            #m5t-mobile-section .m5t-node {
+              width: 56px !important; height: 56px !important; font-size: 22px !important;
+              margin-bottom: 14px !important;
+            }
+            #m5t-mobile-section .m5t-icon { font-size: 20px !important; }
+            #m5t-mobile-section .m5t-title {
+              font-size: 19px !important; margin-bottom: 8px !important; min-height: 0 !important;
+            }
+            #m5t-mobile-section .m5t-text { font-size: 14.5px !important; line-height: 1.55 !important; min-height: 0 !important; }
+            #m5t-carousel-nav {
+              display: flex !important; align-items: center; justify-content: center; gap: 20px;
+              flex-shrink: 0; width: 100%; max-width: 300px;
+            }
+            #m5t-dots { display: flex; gap: 6px; align-items: center; justify-content: center; }
+            #m5t-mobile-callout {
+              display: flex; align-items: center; gap: 10px;
+              background: linear-gradient(135deg, rgba(23,195,178,0.14), rgba(23,195,178,0.03));
+              border: 1px solid rgba(23,195,178,0.35); border-radius: 14px;
+              padding: 10px 16px; max-width: 340px; width: 100%; box-sizing: border-box; flex-shrink: 0;
+            }
+            #m5t-mobile-callout span { font-size: 16px; flex-shrink: 0; }
+            #m5t-mobile-callout p {
+              font-family: var(--font-h); font-weight: 700; font-size: 12px; color: var(--white); margin: 0;
+            }
+          }
+        </style>
+
+        <div class="top-bar">
+          <span class="section-tag">🔋 Procedimento</span>
+          <div class="slide-title" style="margin-top:6px">Passo a Passo <span>Troca de Bateria</span></div>
+          <div class="slide-subtitle">Manutenção e Segurança com Baterias</div>
+        </div>
+
+        <div class="content-area">
+          <div class="m5t-wrap">
+            <div class="m5t-row" style="grid-template-columns: repeat(5, 1fr);">
+              <div class="m5t-step">
+                <div class="m5t-node">1</div>
+                <h3 class="m5t-title"><span class="m5t-icon">🔑</span>Confirme o nível de carga</h3>
+                <p class="m5t-text">Ligue a chave e verifique a carga.</p>
+              </div>
+              <div class="m5t-step">
+                <div class="m5t-node">2</div>
+                <h3 class="m5t-title"><span class="m5t-icon">⏻</span>Desligue o equipamento</h3>
+                <p class="m5t-text">Desligue na chave de ignição.</p>
+              </div>
+              <div class="m5t-step">
+                <div class="m5t-node">3</div>
+                <h3 class="m5t-title"><span class="m5t-icon">🔓</span>Abra a tampa e solte a trava</h3>
+                <p class="m5t-text">Com cuidado, solte a trava de segurança.</p>
+              </div>
+              <div class="m5t-step">
+                <div class="m5t-node">4</div>
+                <h3 class="m5t-title"><span class="m5t-icon">🔌</span>Desconecte o cabo</h3>
+                <p class="m5t-text">Segure firme pelo conector.</p>
+              </div>
+              <div class="m5t-step">
+                <div class="m5t-node">5</div>
+                <h3 class="m5t-title"><span class="m5t-icon">📤</span>Retire a bateria antiga</h3>
+                <p class="m5t-text">Atenção ao peso e ao equilíbrio.</p>
+              </div>
+            </div>
+            <div class="m5t-row" style="grid-template-columns: repeat(4, 1fr);">
+              <div class="m5t-step">
+                <div class="m5t-node">6</div>
+                <h3 class="m5t-title"><span class="m5t-icon">📥</span>Posicione a nova bateria</h3>
+                <p class="m5t-text">No mesmo lugar da anterior.</p>
+              </div>
+              <div class="m5t-step">
+                <div class="m5t-node">7</div>
+                <h3 class="m5t-title"><span class="m5t-icon">🔋</span>Verifique a polaridade e conecte</h3>
+                <p class="m5t-text">Conecte a bateria e o cabo elétrico.</p>
+              </div>
+              <div class="m5t-step">
+                <div class="m5t-node">8</div>
+                <h3 class="m5t-title"><span class="m5t-icon">🔒</span>Trave e feche a tampa</h3>
+                <p class="m5t-text">Bateria carregada e trava acondicionada.</p>
+              </div>
+              <div class="m5t-step">
+                <div class="m5t-node">9</div>
+                <h3 class="m5t-title"><span class="m5t-icon">🔌</span>Conecte no carregador</h3>
+                <p class="m5t-text">Bateria descarregada vai para recarga.</p>
+              </div>
+            </div>
+            <div class="m5t-callout">
+              <span class="m5t-callout-icon">✅</span>
+              <p>Procedimento correto é garantia de um trabalho seguro!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── MOBILE: carrossel com setas ── -->
+        <div id="m5t-mobile-section" style="display:none;">
+          <div id="m5t-card-viewport">
+            <div class="m5t-mstep m5t-active" data-idx="0">
+              <div class="m5t-node">1</div>
+              <h3 class="m5t-title"><span class="m5t-icon">🔑</span>Confirme o nível de carga</h3>
+              <p class="m5t-text">Ligue a chave elétrica e confirme o nível de carga da bateria antes de iniciar a troca.</p>
+            </div>
+            <div class="m5t-mstep" data-idx="1">
+              <div class="m5t-node">2</div>
+              <h3 class="m5t-title"><span class="m5t-icon">⏻</span>Desligue o equipamento</h3>
+              <p class="m5t-text">Desligue o equipamento na chave de ignição antes de manusear a bateria.</p>
+            </div>
+            <div class="m5t-mstep" data-idx="2">
+              <div class="m5t-node">3</div>
+              <h3 class="m5t-title"><span class="m5t-icon">🔓</span>Abra a tampa e solte a trava</h3>
+              <p class="m5t-text">Com cuidado, abra a tampa da bateria e solte a trava de segurança.</p>
+            </div>
+            <div class="m5t-mstep" data-idx="3">
+              <div class="m5t-node">4</div>
+              <h3 class="m5t-title"><span class="m5t-icon">🔌</span>Desconecte o cabo</h3>
+              <p class="m5t-text">Desconecte o cabo segurando firme pelo conector, para evitar danos aos contatos.</p>
+            </div>
+            <div class="m5t-mstep" data-idx="4">
+              <div class="m5t-node">5</div>
+              <h3 class="m5t-title"><span class="m5t-icon">📤</span>Retire a bateria antiga</h3>
+              <p class="m5t-text">Retire a bateria antiga do compartimento com atenção ao peso e ao equilíbrio.</p>
+            </div>
+            <div class="m5t-mstep" data-idx="5">
+              <div class="m5t-node">6</div>
+              <h3 class="m5t-title"><span class="m5t-icon">📥</span>Posicione a nova bateria</h3>
+              <p class="m5t-text">Certifique-se de que a nova bateria seja posicionada exatamente no mesmo lugar da anterior.</p>
+            </div>
+            <div class="m5t-mstep" data-idx="6">
+              <div class="m5t-node">7</div>
+              <h3 class="m5t-title"><span class="m5t-icon">🔋</span>Verifique a polaridade e conecte</h3>
+              <p class="m5t-text">Verifique a polaridade e conecte a bateria e o cabo elétrico corretamente.</p>
+            </div>
+            <div class="m5t-mstep" data-idx="7">
+              <div class="m5t-node">8</div>
+              <h3 class="m5t-title"><span class="m5t-icon">🔒</span>Trave e feche a tampa</h3>
+              <p class="m5t-text">Prenda a bateria firmemente com a trava e feche a tampa, garantindo que a bateria esteja carregada no prazo e a trava devidamente acondicionada.</p>
+            </div>
+            <div class="m5t-mstep" data-idx="8">
+              <div class="m5t-node">9</div>
+              <h3 class="m5t-title"><span class="m5t-icon">🔌</span>Conecte no carregador</h3>
+              <p class="m5t-text">Ao terminar o processo, conecte a bateria descarregada no carregador para a próxima recarga.</p>
+            </div>
+          </div>
+          <div id="m5t-carousel-nav">
+            <button class="tipos-arrow" id="m5t-prev" aria-label="Anterior" onclick="m5tCarouselNav(-1)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div id="m5t-dots">
+              <div class="tipos-dot active"></div>
+              <div class="tipos-dot"></div>
+              <div class="tipos-dot"></div>
+              <div class="tipos-dot"></div>
+              <div class="tipos-dot"></div>
+              <div class="tipos-dot"></div>
+              <div class="tipos-dot"></div>
+              <div class="tipos-dot"></div>
+              <div class="tipos-dot"></div>
+            </div>
+            <button class="tipos-arrow" id="m5t-next" aria-label="Próximo" onclick="m5tCarouselNav(1)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+            </button>
+          </div>
+          <div id="m5t-mobile-callout">
+            <span>✅</span>
+            <p>Procedimento correto é garantia de um trabalho seguro!</p>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S-MOD5-VIDEO2: VÍDEO — Cuidados com a Água da Bateria e Controle Organizacional ── -->
+      <section class="slide video-slide" id="s-mod5-video2">
+        <div class="top-bar">
+          <div><span class="section-tag">📹 Vídeo</span>
+            <div class="slide-title" style="margin-top:6px">Cuidados com a Água da Bateria <span>e Controle Organizacional</span></div>
+            <div class="slide-subtitle">Manutenção e Segurança com Baterias</div>
+          </div>
+        </div>
+        <div class="content-area" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <div class="video-wrap">
+            <div class="video-box">
+              <iframe id="panda-091f1e7b-29a4-4398-a926-c0037854b907"
+                src="https://player-vz-d35edf2a-8e7.tv.pandavideo.com.br/embed/?v=091f1e7b-29a4-4398-a926-c0037854b907"
+                frameborder="0" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen="true" fetchpriority="high"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+                title="Cuidados com a Água da Bateria e Controle Organizacional — NR11 - OPERADOR DE TRANSPALETEIRA">
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S-MOD5-RESTRICOES: CONTEÚDO — Restrições no Uso da Bateria ── -->
+      <section class="slide" id="s-mod5-restricoes">
+        <style>
+          #s-mod5-restricoes .content-area {
+            display: flex; align-items: center; justify-content: center;
+            container-type: size;
+          }
+          #s-mod5-restricoes .m5r-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: clamp(8px, 1.8cqh, 20px) clamp(8px, 1.8cqw, 20px);
+            width: 100%;
+            max-width: 1150px;
+            margin: 0 auto;
+          }
+          #s-mod5-restricoes .m5r-card {
+            position: relative;
+            background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: clamp(10px,2.5cqh,20px);
+            padding: clamp(8px,3cqh,22px) clamp(10px,2.6cqw,20px);
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+          }
+          #s-mod5-restricoes .m5r-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            background: var(--m5r-accent);
+          }
+          #s-mod5-restricoes .m5r-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--m5r-accent);
+            box-shadow: 0 18px 38px rgba(0,0,0,0.4);
+          }
+          #s-mod5-restricoes .m5r-icon {
+            width: clamp(26px,8cqh,46px); height: clamp(26px,8cqh,46px);
+            border-radius: clamp(8px,2cqh,14px);
+            background: color-mix(in srgb, var(--m5r-accent) 18%, transparent);
+            border: 1px solid color-mix(in srgb, var(--m5r-accent) 45%, transparent);
+            display: flex; align-items: center; justify-content: center;
+            font-size: clamp(13px,3.6cqh,22px);
+            margin-bottom: clamp(4px,1.8cqh,12px);
+          }
+          #s-mod5-restricoes .m5r-title {
+            font-family: var(--font-h); font-weight: 800;
+            font-size: clamp(10.5px,2.6cqh,15.5px); color: var(--white);
+            margin-bottom: clamp(2px,1cqh,6px); line-height: 1.25;
+          }
+          #s-mod5-restricoes .m5r-text {
+            font-family: var(--font-p); font-size: clamp(9px,2.1cqh,12.5px);
+            color: rgba(255,255,255,0.7); line-height: 1.35;
+          }
+          @media (max-width: 900px) {
+            #s-mod5-restricoes .m5r-grid { grid-template-columns: repeat(2, 1fr); }
+          }
+
+          /* ── MOBILE: carrossel com setas (mesmo padrão do Módulo 2) ── */
+          @media screen and (max-width: 768px) and (orientation: portrait) {
+            @keyframes restrFadeIn {
+              from { opacity: 0; transform: translateY(10px); }
+              to   { opacity: 1; transform: translateY(0); }
+            }
+            #s-mod5-restricoes {
+              display: flex !important; flex-direction: column !important; overflow: hidden !important;
+            }
+            #s-mod5-restricoes .content-area { display: none !important; }
+            #restr-mobile-section {
+              display: flex !important; flex-direction: column !important;
+              align-items: center !important; justify-content: center !important;
+              flex: 1 1 0 !important; min-height: 0 !important; overflow: hidden !important;
+              padding: 8px 16px 72px !important; width: 100% !important;
+              box-sizing: border-box !important; gap: 14px !important;
+            }
+            #restr-card-viewport { width: 100%; max-width: 340px; flex-shrink: 0; position: relative; }
+            #restr-mobile-section .m5r-card {
+              display: none; width: 100% !important; max-width: 100% !important;
+              margin: 0 !important; padding: 30px 22px 26px !important;
+              box-sizing: border-box !important;
+            }
+            #restr-mobile-section .m5r-card.m5r-active {
+              display: flex !important; flex-direction: column; align-items: center; text-align: center;
+              animation: restrFadeIn 0.35s ease forwards;
+            }
+            #restr-mobile-section .m5r-icon {
+              width: 58px !important; height: 58px !important; font-size: 27px !important;
+              margin-bottom: 14px !important;
+            }
+            #restr-mobile-section .m5r-title { font-size: 18px !important; margin-bottom: 8px !important; }
+            #restr-mobile-section .m5r-text { font-size: 14px !important; line-height: 1.55 !important; }
+            #restr-carousel-nav {
+              display: flex !important; align-items: center; justify-content: center; gap: 20px;
+              flex-shrink: 0; width: 100%; max-width: 300px;
+            }
+            #restr-dots { display: flex; gap: 7px; align-items: center; flex: 1; justify-content: center; }
+          }
+        </style>
+
+        <div class="top-bar">
+          <span class="section-tag">⚠️ Segurança</span>
+          <div class="slide-title" style="margin-top:6px">Restrições <span>no Uso da Bateria</span></div>
+          <div class="slide-subtitle">Manutenção e Segurança com Baterias</div>
+        </div>
+
+        <div class="content-area">
+          <div class="m5r-grid">
+            <div class="m5r-card" style="--m5r-accent:#e74c3c;">
+              <div class="m5r-icon">🚭</div>
+              <h3 class="m5r-title">Proibido Fumar e Fontes de Ignição</h3>
+              <p class="m5r-text">Não fume, não use chamas de forma alguma nem produza fagulhas próximo a uma bateria — os riscos químicos são sérios.</p>
+            </div>
+            <div class="m5r-card" style="--m5r-accent:#ff9f43;">
+              <div class="m5r-icon">💥</div>
+              <h3 class="m5r-title">Evite Impactos</h3>
+              <p class="m5r-text">Nunca permita que a bateria sofra impactos, para evitar danos internos à sua estrutura.</p>
+            </div>
+            <div class="m5r-card" style="--m5r-accent:#ffc837;">
+              <div class="m5r-icon">🚫</div>
+              <h3 class="m5r-title">Não Apoie Objetos</h3>
+              <p class="m5r-text">Não coloque nenhum objeto, ferramenta ou pano sobre a bateria, evitando curto-circuito.</p>
+            </div>
+            <div class="m5r-card" style="--m5r-accent:#17c3b2;">
+              <div class="m5r-icon">🧼</div>
+              <h3 class="m5r-title">Mantenha Limpa e Seca</h3>
+              <p class="m5r-text">Mantenha o corpo da bateria sempre limpo e seco, para evitar corrosão e fuga de corrente à terra.</p>
+            </div>
+            <div class="m5r-card" style="--m5r-accent:#e84393;">
+              <div class="m5r-icon">👁️</div>
+              <h3 class="m5r-title">Contato com Pele ou Olhos</h3>
+              <p class="m5r-text">Se a solução ácida atingir olhos, pele ou roupas, lave imediatamente com água pura em abundância. Se os olhos forem atingidos, procure socorro médico sem demora.</p>
+            </div>
+            <div class="m5r-card" style="--m5r-accent:#5352ed;">
+              <div class="m5r-icon">🧪</div>
+              <h3 class="m5r-title">Derramamento Acidental</h3>
+              <p class="m5r-text">Neutralize o ácido derramado com bicarbonato de sódio e água, até que pare de borbulhar.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── MOBILE: carrossel com setas ── -->
+        <div id="restr-mobile-section" style="display:none;">
+          <div id="restr-card-viewport">
+            <div class="m5r-card m5r-active" data-idx="0" style="--m5r-accent:#e74c3c;">
+              <div class="m5r-icon">🚭</div>
+              <h3 class="m5r-title">Proibido Fumar e Fontes de Ignição</h3>
+              <p class="m5r-text">Não fume, não use chamas de forma alguma nem produza fagulhas próximo a uma bateria — os riscos químicos são sérios.</p>
+            </div>
+            <div class="m5r-card" data-idx="1" style="--m5r-accent:#ff9f43;">
+              <div class="m5r-icon">💥</div>
+              <h3 class="m5r-title">Evite Impactos</h3>
+              <p class="m5r-text">Nunca permita que a bateria sofra impactos, para evitar danos internos à sua estrutura.</p>
+            </div>
+            <div class="m5r-card" data-idx="2" style="--m5r-accent:#ffc837;">
+              <div class="m5r-icon">🚫</div>
+              <h3 class="m5r-title">Não Apoie Objetos</h3>
+              <p class="m5r-text">Não coloque nenhum objeto, ferramenta ou pano sobre a bateria, evitando curto-circuito.</p>
+            </div>
+            <div class="m5r-card" data-idx="3" style="--m5r-accent:#17c3b2;">
+              <div class="m5r-icon">🧼</div>
+              <h3 class="m5r-title">Mantenha Limpa e Seca</h3>
+              <p class="m5r-text">Mantenha o corpo da bateria sempre limpo e seco, para evitar corrosão e fuga de corrente à terra.</p>
+            </div>
+            <div class="m5r-card" data-idx="4" style="--m5r-accent:#e84393;">
+              <div class="m5r-icon">👁️</div>
+              <h3 class="m5r-title">Contato com Pele ou Olhos</h3>
+              <p class="m5r-text">Se a solução ácida atingir olhos, pele ou roupas, lave imediatamente com água pura em abundância. Se os olhos forem atingidos, procure socorro médico sem demora.</p>
+            </div>
+            <div class="m5r-card" data-idx="5" style="--m5r-accent:#5352ed;">
+              <div class="m5r-icon">🧪</div>
+              <h3 class="m5r-title">Derramamento Acidental</h3>
+              <p class="m5r-text">Neutralize o ácido derramado com bicarbonato de sódio e água, até que pare de borbulhar.</p>
+            </div>
+          </div>
+          <div id="restr-carousel-nav">
+            <button class="tipos-arrow" id="restr-prev" aria-label="Anterior" onclick="restrCarouselNav(-1)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div id="restr-dots">
+              <div class="tipos-dot active"></div>
+              <div class="tipos-dot"></div>
+              <div class="tipos-dot"></div>
+              <div class="tipos-dot"></div>
+              <div class="tipos-dot"></div>
+              <div class="tipos-dot"></div>
+            </div>
+            <button class="tipos-arrow" id="restr-next" aria-label="Próximo" onclick="restrCarouselNav(1)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S-MOD5-GAME: DESAFIO — Central de Manutenção ── -->
+      <section class="slide" id="s-mod5-game">
+        <style>
+          #s-mod5-game .content-area {
+            display: flex; align-items: center; justify-content: center;
+            container-type: size;
+          }
+          #s-mod5-game .m5g-wrap { width: 100%; max-width: clamp(360px, 68cqw, 860px); margin: 0 auto; }
+
+          #s-mod5-game #m5g-intro,
+          #s-mod5-game #m5g-result {
+            padding: clamp(24px,10cqh,64px) clamp(24px,6cqw,48px);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(23,195,178,0.28);
+            border-radius: clamp(16px,3cqw,26px);
+            box-shadow: 0 28px 64px rgba(0,0,0,0.4);
+            box-sizing: border-box;
+          }
+          #s-mod5-game #m5g-intro .ic-circle {
+            width: clamp(64px,20cqh,120px) !important;
+            height: clamp(64px,20cqh,120px) !important;
+            font-size: clamp(32px,10cqh,60px) !important;
+            margin: 0 auto clamp(20px,7cqh,44px) !important;
+          }
+          #s-mod5-game #m5g-intro h3 {
+            font-size: clamp(20px,6.5cqh,36px) !important;
+            margin-bottom: clamp(10px,3.5cqh,22px) !important;
+          }
+          #s-mod5-game #m5g-intro p {
+            font-size: clamp(13.5px,3cqh,17px) !important;
+            line-height: 1.5 !important;
+            margin-bottom: clamp(16px,8cqh,52px) !important;
+          }
+          #s-mod5-game #m5g-intro .btn-start {
+            padding: clamp(12px,3cqh,18px) clamp(28px,5cqw,44px) !important;
+            font-size: clamp(13px,2.2cqh,15px) !important;
+          }
+
+          #s-mod5-game .m5g-top-row {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 10px; gap: 8px;
+          }
+          #s-mod5-game .m5g-counter {
+            font-family: var(--font-h); font-size: 13px; font-weight: 700;
+            color: var(--white); background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px;
+          }
+          #s-mod5-game .m5g-bar-bg {
+            height: 8px; background: rgba(255,255,255,0.05); border-radius: 4px;
+            overflow: hidden; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 18px;
+          }
+          #s-mod5-game .m5g-bar-fill {
+            height: 100%; width: 0%; background: linear-gradient(90deg, #17c3b2, #ffc837);
+            transition: width 0.45s cubic-bezier(0.4,0,0.2,1);
+          }
+          #s-mod5-game .m5g-card {
+            background: rgba(0,0,0,0.28); border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 18px; padding: clamp(20px,4vh,32px) clamp(18px,3vw,26px);
+            min-height: clamp(90px,14vh,130px); display: flex; flex-direction: column;
+            align-items: center; justify-content: center; text-align: center;
+            margin-bottom: 18px; transition: border-color 0.3s, box-shadow 0.3s;
+          }
+          #s-mod5-game .m5g-card.m5g-ok  { border-color: rgba(39,174,96,0.55); box-shadow: 0 0 20px rgba(39,174,96,0.1); }
+          #s-mod5-game .m5g-card.m5g-err { border-color: rgba(231,76,60,0.55); box-shadow: 0 0 20px rgba(231,76,60,0.1); }
+          #s-mod5-game .m5g-emoji { font-size: clamp(26px,4vw,36px); margin-bottom: 10px; }
+          #s-mod5-game .m5g-text {
+            font-family: var(--font-h); font-size: clamp(14px,2vw,17px); font-weight: 700;
+            color: var(--cream); line-height: 1.45; max-width: 560px;
+          }
+          #s-mod5-game .m5g-zones {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+          }
+          #s-mod5-game .m5g-zbtn {
+            display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+            border: 2px solid rgba(255,255,255,0.12); border-radius: 14px;
+            padding: 14px 8px; background: rgba(255,255,255,0.04);
+            cursor: pointer; font-family: var(--font-h); font-weight: 800;
+            font-size: clamp(11px,1.5vw,13px); color: #fff; text-align: center;
+            transition: all 0.2s;
+          }
+          #s-mod5-game .m5g-zbtn .m5g-zicon { font-size: clamp(20px,2.6vw,26px); }
+          #s-mod5-game .m5g-zbtn:hover:not(:disabled) { background: rgba(23,195,178,0.1); border-color: rgba(23,195,178,0.4); transform: translateY(-2px); }
+          #s-mod5-game .m5g-zbtn.m5g-correct { background: rgba(39,174,96,0.2) !important; border-color: #27ae60 !important; }
+          #s-mod5-game .m5g-zbtn.m5g-wrong   { background: rgba(231,76,60,0.18) !important; border-color: #e74c3c !important; color: rgba(255,255,255,0.7) !important; }
+          #s-mod5-game .m5g-zbtn:disabled { opacity: 0.5; cursor: not-allowed; }
+          #s-mod5-game .m5g-feedback {
+            min-height: 22px; text-align: center; font-family: var(--font-h); font-weight: 700;
+            font-size: clamp(11px,1.4vw,13px); margin-top: 14px; letter-spacing: 0.02em;
+          }
+          #s-mod5-game .m5g-feedback.ok  { color: #2ecc71; }
+          #s-mod5-game .m5g-feedback.err { color: #e74c3c; }
+
+          #s-mod5-game .m5g-score-ring {
+            width: 120px; height: 120px; border-radius: 50%;
+            background: conic-gradient(#17c3b2 0%, transparent 0%);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 18px; position: relative; box-shadow: 0 0 36px rgba(23,195,178,0.2);
+          }
+          #s-mod5-game .m5g-score-ring::before {
+            content: ''; position: absolute; inset: 8px; border-radius: 50%; background: #0f1923;
+          }
+          #s-mod5-game .m5g-score-num {
+            font-family: var(--font-h); font-size: 30px; font-weight: 900; color: #17c3b2;
+            position: relative; z-index: 1; line-height: 1;
+          }
+          #s-mod5-game .m5g-score-label {
+            font-family: var(--font-h); font-size: 11px; color: rgba(255,255,255,0.5);
+            position: relative; z-index: 1;
+          }
+          @media (max-width: 560px) {
+            #s-mod5-game .m5g-zones { grid-template-columns: 1fr; }
+          }
+        </style>
+
+        <div class="top-bar">
+          <span class="section-tag">🎮 Desafio</span>
+          <div class="slide-title" style="margin-top:6px">Central de <span>Manutenção</span></div>
+          <div class="slide-subtitle">Manutenção e Segurança com Baterias</div>
+        </div>
+
+        <div class="content-area">
+          <div class="m5g-wrap">
+
+            <!-- INTRO -->
+            <div id="m5g-intro" style="text-align:center; animation: fadeIn 0.8s ease;">
+              <div class="ic-circle" style="margin:0 auto 22px; width:96px; height:96px; font-size:48px;">🛠️</div>
+              <h3 style="font-family:var(--font-h); font-weight:900; color:var(--white);">Desafio Módulo 5 — Central de Manutenção</h3>
+              <p style="color:rgba(255,255,255,0.72);">
+                Você vai ler <strong>5 situações</strong> sobre manutenção, troca de bateria e restrições de segurança.
+                Toque no <strong>setor correto</strong> para classificar cada uma: 🔧 Manutenção, 🔋 Troca de Bateria ou ⚠️ Restrição.
+              </p>
+              <button class="btn-start" onclick="startM5Game()" style="padding:16px 42px; font-size:15px; text-transform:uppercase;">
+                INICIAR TRIAGEM
+              </button>
+            </div>
+
+            <!-- PLAY -->
+            <div id="m5g-play" style="display:none;">
+              <div class="m5g-top-row">
+                <span class="m5g-counter" id="m5g-counter">1 / 5</span>
+              </div>
+              <div class="m5g-bar-bg"><div class="m5g-bar-fill" id="m5g-bar"></div></div>
+              <div class="m5g-card" id="m5g-card">
+                <div class="m5g-emoji" id="m5g-emoji">🔍</div>
+                <p class="m5g-text" id="m5g-text">...</p>
+              </div>
+              <div class="m5g-zones">
+                <button type="button" class="m5g-zbtn" data-zone="manutencao" onclick="handleM5Answer('manutencao')">
+                  <span class="m5g-zicon">🔧</span>Manutenção
+                </button>
+                <button type="button" class="m5g-zbtn" data-zone="bateria" onclick="handleM5Answer('bateria')">
+                  <span class="m5g-zicon">🔋</span>Troca de Bateria
+                </button>
+                <button type="button" class="m5g-zbtn" data-zone="restricao" onclick="handleM5Answer('restricao')">
+                  <span class="m5g-zicon">⚠️</span>Restrição
+                </button>
+              </div>
+              <div class="m5g-feedback" id="m5g-feedback"></div>
+            </div>
+
+            <!-- RESULT -->
+            <div id="m5g-result" style="display:none; text-align:center; animation:slideUp 0.6s ease;">
+              <div class="m5g-score-ring" id="m5g-score-ring">
+                <div><div class="m5g-score-num" id="m5g-score-num">0</div><div class="m5g-score-label">/ 5</div></div>
+              </div>
+              <h3 style="font-family:var(--font-h); font-size:clamp(22px,4vw,28px); color:var(--gold); margin-bottom:8px; font-weight:900;">Triagem Concluída!</h3>
+              <div class="r-status ap" style="display:inline-block; padding:6px 18px; font-size:13px; margin-bottom:14px; font-weight:700;">Módulo 5 — Manutenção e Baterias Validadas</div>
+              <p id="m5g-result-msg" style="color:rgba(255,255,255,0.88); font-size:15px; line-height:1.55; margin-bottom:22px; max-width:480px; margin-left:auto; margin-right:auto;"></p>
+              <button class="btn-retry" onclick="resetM5Game()" style="background:var(--white); color:var(--black); font-weight:800; border-radius:99px; padding:12px 32px;">JOGAR NOVAMENTE</button>
+            </div>
+
           </div>
         </div>
         <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
@@ -16294,6 +17554,252 @@
       });
     })();
 
+    /* ── RESTRIÇÕES NO USO DA BATERIA — Mobile Carousel ── */
+    (function () {
+      var restrIdx = 0;
+      var restrTotal = 6;
+
+      function isMobilePortraitRestr() {
+        return window.matchMedia(
+          'screen and (max-width: 768px) and (orientation: portrait)'
+        ).matches;
+      }
+
+      function restrSetVisibility() {
+        var section     = document.getElementById('restr-mobile-section');
+        var contentArea = document.querySelector('#s-mod5-restricoes .content-area');
+        if (!section || !contentArea) return;
+        if (isMobilePortraitRestr()) {
+          section.style.display     = 'flex';
+          contentArea.style.display = 'none';
+        } else {
+          section.style.display     = 'none';
+          contentArea.style.display = '';
+        }
+      }
+
+      function restrUpdateUI() {
+        document.querySelectorAll('#restr-dots .tipos-dot').forEach(function (d, i) {
+          d.classList.toggle('active', i === restrIdx);
+        });
+        var prev = document.getElementById('restr-prev');
+        var next = document.getElementById('restr-next');
+        if (prev) prev.disabled = (restrIdx === 0);
+        if (next) next.disabled = (restrIdx === restrTotal - 1);
+      }
+
+      function restrShowCard(idx) {
+        var cards = document.querySelectorAll('#restr-card-viewport .m5r-card');
+        cards.forEach(function (c, i) {
+          c.classList.toggle('m5r-active', i === idx);
+        });
+      }
+
+      window.restrCarouselNav = function (dir) {
+        var newIdx = restrIdx + dir;
+        if (newIdx < 0 || newIdx >= restrTotal) return;
+        restrIdx = newIdx;
+        restrShowCard(restrIdx);
+        restrUpdateUI();
+      };
+
+      /* Touch / swipe */
+      var rsX = 0;
+      function restrInitSwipe() {
+        var vp = document.getElementById('restr-card-viewport');
+        if (!vp) return;
+        vp.addEventListener('touchstart', function (e) {
+          rsX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        vp.addEventListener('touchend', function (e) {
+          var diff = rsX - e.changedTouches[0].screenX;
+          if (Math.abs(diff) > 40) window.restrCarouselNav(diff > 0 ? 1 : -1);
+        }, { passive: true });
+      }
+
+      function restrInit() {
+        restrSetVisibility();
+        restrShowCard(0);
+        restrUpdateUI();
+        restrInitSwipe();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', restrInit);
+      } else {
+        restrInit();
+      }
+
+      window.addEventListener('resize', restrSetVisibility);
+      window.addEventListener('orientationchange', function () {
+        setTimeout(restrSetVisibility, 120);
+      });
+    })();
+
+    /* ── PASSO A PASSO TROCA DE BATERIA — Mobile Carousel ── */
+    (function () {
+      var m5tCIdx = 0;
+      var m5tCTotal = 9;
+
+      function isMobilePortraitM5t() {
+        return window.matchMedia(
+          'screen and (max-width: 768px) and (orientation: portrait)'
+        ).matches;
+      }
+
+      function m5tSetVisibility() {
+        var section     = document.getElementById('m5t-mobile-section');
+        var contentArea = document.querySelector('#s-mod5-troca-bateria .content-area');
+        if (!section || !contentArea) return;
+        if (isMobilePortraitM5t()) {
+          section.style.display     = 'flex';
+          contentArea.style.display = 'none';
+        } else {
+          section.style.display     = 'none';
+          contentArea.style.display = '';
+        }
+      }
+
+      function m5tUpdateUI() {
+        document.querySelectorAll('#m5t-dots .tipos-dot').forEach(function (d, i) {
+          d.classList.toggle('active', i === m5tCIdx);
+        });
+        var prev = document.getElementById('m5t-prev');
+        var next = document.getElementById('m5t-next');
+        if (prev) prev.disabled = (m5tCIdx === 0);
+        if (next) next.disabled = (m5tCIdx === m5tCTotal - 1);
+      }
+
+      function m5tShowCard(idx) {
+        var cards = document.querySelectorAll('#m5t-card-viewport .m5t-mstep');
+        cards.forEach(function (c, i) {
+          c.classList.toggle('m5t-active', i === idx);
+        });
+      }
+
+      window.m5tCarouselNav = function (dir) {
+        var newIdx = m5tCIdx + dir;
+        if (newIdx < 0 || newIdx >= m5tCTotal) return;
+        m5tCIdx = newIdx;
+        m5tShowCard(m5tCIdx);
+        m5tUpdateUI();
+      };
+
+      /* Touch / swipe */
+      var m5tSX = 0;
+      function m5tInitSwipe() {
+        var vp = document.getElementById('m5t-card-viewport');
+        if (!vp) return;
+        vp.addEventListener('touchstart', function (e) {
+          m5tSX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        vp.addEventListener('touchend', function (e) {
+          var diff = m5tSX - e.changedTouches[0].screenX;
+          if (Math.abs(diff) > 40) window.m5tCarouselNav(diff > 0 ? 1 : -1);
+        }, { passive: true });
+      }
+
+      function m5tInit() {
+        m5tSetVisibility();
+        m5tShowCard(0);
+        m5tUpdateUI();
+        m5tInitSwipe();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', m5tInit);
+      } else {
+        m5tInit();
+      }
+
+      window.addEventListener('resize', m5tSetVisibility);
+      window.addEventListener('orientationchange', function () {
+        setTimeout(m5tSetVisibility, 120);
+      });
+    })();
+
+    /* ── MANUTENÇÃO E CONSERVAÇÃO DA TRANSPALETEIRA — Mobile Carousel ── */
+    (function () {
+      var m5cCIdx = 0;
+      var m5cCTotal = 4;
+
+      function isMobilePortraitM5c() {
+        return window.matchMedia(
+          'screen and (max-width: 768px) and (orientation: portrait)'
+        ).matches;
+      }
+
+      function m5cSetVisibility() {
+        var section     = document.getElementById('m5c-mobile-section');
+        var contentArea = document.querySelector('#s-mod5-manutencao .content-area');
+        if (!section || !contentArea) return;
+        if (isMobilePortraitM5c()) {
+          section.style.display     = 'flex';
+          contentArea.style.display = 'none';
+        } else {
+          section.style.display     = 'none';
+          contentArea.style.display = '';
+        }
+      }
+
+      function m5cUpdateUI() {
+        document.querySelectorAll('#m5c-dots .tipos-dot').forEach(function (d, i) {
+          d.classList.toggle('active', i === m5cCIdx);
+        });
+        var prev = document.getElementById('m5c-prev');
+        var next = document.getElementById('m5c-next');
+        if (prev) prev.disabled = (m5cCIdx === 0);
+        if (next) next.disabled = (m5cCIdx === m5cCTotal - 1);
+      }
+
+      function m5cShowCard(idx) {
+        var cards = document.querySelectorAll('#m5c-card-viewport .m5c-card');
+        cards.forEach(function (c, i) {
+          c.classList.toggle('m5c-active', i === idx);
+        });
+      }
+
+      window.m5cCarouselNav = function (dir) {
+        var newIdx = m5cCIdx + dir;
+        if (newIdx < 0 || newIdx >= m5cCTotal) return;
+        m5cCIdx = newIdx;
+        m5cShowCard(m5cCIdx);
+        m5cUpdateUI();
+      };
+
+      /* Touch / swipe */
+      var m5cSX = 0;
+      function m5cInitSwipe() {
+        var vp = document.getElementById('m5c-card-viewport');
+        if (!vp) return;
+        vp.addEventListener('touchstart', function (e) {
+          m5cSX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        vp.addEventListener('touchend', function (e) {
+          var diff = m5cSX - e.changedTouches[0].screenX;
+          if (Math.abs(diff) > 40) window.m5cCarouselNav(diff > 0 ? 1 : -1);
+        }, { passive: true });
+      }
+
+      function m5cInit() {
+        m5cSetVisibility();
+        m5cShowCard(0);
+        m5cUpdateUI();
+        m5cInitSwipe();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', m5cInit);
+      } else {
+        m5cInit();
+      }
+
+      window.addEventListener('resize', m5cSetVisibility);
+      window.addEventListener('orientationchange', function () {
+        setTimeout(m5cSetVisibility, 120);
+      });
+    })();
+
     /* ── REQUISITOS PARA OPERAÇÃO — Mobile Carousel ── */
     (function () {
       var reqIdx   = 0;
@@ -16658,6 +18164,297 @@
 
       window.resetM3Game = function () {
         m3gShow('m3g-intro');
+      };
+
+    })();
+
+    /* ════════════════════════════════════════
+       DESAFIO MÓDULO 4 — Turno Relâmpago
+    ════════════════════════════════════════ */
+    (function () {
+      var m4gIdx    = 0;
+      var m4gScore  = 0;
+      var m4gLives  = 3;
+      var m4gStreak = 0;
+      var m4gBusy   = false;
+      var m4gTimerInterval = null;
+      var m4gTimeLeft = 0;
+      var M4G_TIME_MS = 12000;
+
+      var m4gDeck = [
+        { emoji: '📦', text: 'Cargas soltas ou instáveis podem ser transportadas sem problema, desde que o trajeto seja curto.', ans: false, tip: 'Cargas soltas ou instáveis nunca são permitidas — o equilíbrio deve ser garantido antes de mover.' },
+        { emoji: '🟩', text: 'O palete de quatro entradas permite a inserção dos garfos por qualquer um dos quatro lados.', ans: true, tip: 'Correto! O palete de quatro entradas é o mais versátil, com abertura em todos os lados.' },
+        { emoji: '🏖️', text: 'Areia solta, sem contenção, pode ser transportada normalmente na transpaleteira.', ans: false, tip: 'Materiais a granel sem contenção, como areia solta ou líquidos livres, nunca devem ser transportados na transpaleteira.' },
+        { emoji: '🧵', text: 'Bobinas e chapas soltas, sem embalagem individual, são classificadas como carga diversa.', ans: true, tip: 'Correto! Cargas diversas são transportadas sem embalagem, de forma individual, como bobinas e chapas.' },
+        { emoji: '📐', text: 'O material empilhado deve ficar a pelo menos 50 cm de distância das estruturas laterais do prédio.', ans: true, tip: 'Correto! O afastamento mínimo de 50 cm também vale para os corredores de circulação.' }
+      ];
+
+      function m4gShow(id) {
+        ['m4g-intro', 'm4g-play', 'm4g-result'].forEach(function (p) {
+          var el = document.getElementById(p);
+          if (el) el.style.display = (p === id) ? 'block' : 'none';
+        });
+      }
+
+      function m4gRenderLives() {
+        var el = document.getElementById('m4g-lives');
+        if (!el) return;
+        var s = '';
+        for (var i = 0; i < 3; i++) s += (i < m4gLives) ? '❤️' : '🖤';
+        el.textContent = s;
+      }
+
+      function m4gRenderStreak() {
+        var el = document.getElementById('m4g-streak');
+        var num = document.getElementById('m4g-streak-num');
+        if (!el || !num) return;
+        if (m4gStreak >= 2) {
+          num.textContent = m4gStreak;
+          el.classList.add('show');
+        } else {
+          el.classList.remove('show');
+        }
+      }
+
+      function m4gClearTimer() {
+        if (m4gTimerInterval) { clearInterval(m4gTimerInterval); m4gTimerInterval = null; }
+      }
+
+      function m4gStartTimer() {
+        m4gClearTimer();
+        m4gTimeLeft = M4G_TIME_MS;
+        var fill = document.getElementById('m4g-timer-fill');
+        if (fill) { fill.style.width = '100%'; fill.style.background = 'linear-gradient(90deg,#2ecc71,#27ae60)'; }
+        m4gTimerInterval = setInterval(function () {
+          m4gTimeLeft -= 100;
+          var pct = Math.max(0, (m4gTimeLeft / M4G_TIME_MS) * 100);
+          if (fill) {
+            fill.style.width = pct + '%';
+            if (pct <= 20) fill.style.background = 'linear-gradient(90deg,#e74c3c,#c0392b)';
+            else if (pct <= 50) fill.style.background = 'linear-gradient(90deg,#f1c40f,#f39c12)';
+          }
+          if (m4gTimeLeft <= 0) {
+            m4gClearTimer();
+            m4gAnswer(null);
+          }
+        }, 100);
+      }
+
+      function m4gRender() {
+        if (m4gIdx >= m4gDeck.length) { m4gFinish(); return; }
+        var item = m4gDeck[m4gIdx];
+        m4gBusy = false;
+
+        document.getElementById('m4g-counter').textContent = (m4gIdx + 1) + ' / ' + m4gDeck.length;
+        document.getElementById('m4g-emoji').textContent = item.emoji;
+        document.getElementById('m4g-text').textContent = item.text;
+
+        var card = document.getElementById('m4g-card');
+        card.className = 'm4g-card';
+
+        var btns = document.querySelectorAll('#m4g-answers .m4g-abtn');
+        btns.forEach(function (b) { b.disabled = false; b.classList.remove('m4g-correct', 'm4g-wrong'); });
+
+        var fb = document.getElementById('m4g-feedback');
+        fb.className = 'm4g-feedback';
+        fb.textContent = '';
+
+        m4gRenderLives();
+        m4gRenderStreak();
+        m4gStartTimer();
+      }
+
+      function m4gAnswer(chosen) {
+        if (m4gBusy) return;
+        m4gBusy = true;
+        m4gClearTimer();
+
+        var item = m4gDeck[m4gIdx];
+        var isOk = (chosen === item.ans);
+        var card = document.getElementById('m4g-card');
+        var fb = document.getElementById('m4g-feedback');
+        var btns = document.querySelectorAll('#m4g-answers .m4g-abtn');
+
+        btns.forEach(function (b, i) {
+          b.disabled = true;
+          var isYesBtn = b.classList.contains('m4g-yes');
+          if (isYesBtn === item.ans) b.classList.add('m4g-correct');
+          else if (chosen !== null && isYesBtn === chosen && !isOk) b.classList.add('m4g-wrong');
+        });
+
+        if (typeof playGameFeedback === 'function') playGameFeedback(isOk ? 'ok' : 'nok');
+
+        if (isOk) {
+          m4gScore++;
+          m4gStreak++;
+          card.classList.add('m4g-ok');
+          fb.className = 'm4g-feedback ok';
+        } else {
+          m4gStreak = 0;
+          m4gLives--;
+          card.classList.add('m4g-err');
+          fb.className = 'm4g-feedback err';
+        }
+        fb.textContent = (isOk ? '✅ ' : '❌ ') + item.tip;
+        m4gRenderLives();
+        m4gRenderStreak();
+
+        setTimeout(function () {
+          m4gIdx++;
+          if (m4gLives <= 0) { m4gFinish(); return; }
+          m4gRender();
+        }, 1100);
+      }
+
+      function m4gFinish() {
+        m4gClearTimer();
+        m4gShow('m4g-result');
+        var total = m4gDeck.length;
+        var attempted = Math.min(m4gIdx, total);
+
+        document.getElementById('m4g-score-text').textContent = m4gScore + ' / ' + total;
+
+        var pct = m4gScore / total;
+        var stars = pct >= 0.8 ? 3 : (pct >= 0.5 ? 2 : 1);
+        document.getElementById('m4g-stars').textContent = '⭐'.repeat(stars) + '☆'.repeat(3 - stars);
+
+        var msg = document.getElementById('m4g-result-msg');
+        if (m4gLives <= 0 && attempted < total) {
+          msg.textContent = 'Suas vidas acabaram! Você acertou ' + m4gScore + ' de ' + attempted + ' rodadas. Revise os vídeos do Módulo 4 e tente de novo.';
+        } else if (m4gScore === total) {
+          msg.textContent = 'Turno perfeito! Você dominou estabilidade de carga, paletes, classificação de cargas e regras de armazenamento.';
+        } else {
+          msg.textContent = 'Você acertou ' + m4gScore + ' de ' + total + '. Revise os vídeos do Módulo 4 para fechar com 3 estrelas!';
+        }
+      }
+
+      window.startM4Game = function () {
+        m4gIdx = 0; m4gScore = 0; m4gLives = 3; m4gStreak = 0; m4gBusy = false;
+        m4gShow('m4g-play');
+        m4gRender();
+      };
+
+      window.handleM4Answer = function (chosen) {
+        m4gAnswer(chosen);
+      };
+
+      window.resetM4Game = function () {
+        m4gClearTimer();
+        m4gShow('m4g-intro');
+      };
+
+    })();
+
+    /* ════════════════════════════════════════
+       DESAFIO MÓDULO 5 — Central de Manutenção
+    ════════════════════════════════════════ */
+    (function () {
+      var m5gIdx   = 0;
+      var m5gScore = 0;
+      var m5gBusy  = false;
+
+      var m5gDeck = [
+        { emoji: '🚭', text: 'Nunca fume, use chamas ou produza fagulhas próximo a uma bateria.', zone: 'restricao', tip: 'É uma restrição de segurança — o risco químico de explosão é real.' },
+        { emoji: '📋', text: 'Elaborar um roteiro de inspeção diário, verificando pneus, freios, bateria e vazamentos.', zone: 'manutencao', tip: 'Isso é manutenção preventiva: o checklist diário evita falhas inesperadas.' },
+        { emoji: '🔑', text: 'Confirme o nível de carga e depois desligue o equipamento na chave de ignição.', zone: 'bateria', tip: 'São os primeiros passos do procedimento de troca de bateria.' },
+        { emoji: '🚫', text: 'Não coloque ferramentas ou panos sobre a bateria, para evitar curto-circuito.', zone: 'restricao', tip: 'É uma restrição de segurança no manuseio da bateria.' },
+        { emoji: '🔌', text: 'Ao terminar o processo, conecte a bateria descarregada no carregador.', zone: 'bateria', tip: 'É o passo final do procedimento de troca de bateria.' }
+      ];
+
+      function m5gShow(id) {
+        ['m5g-intro', 'm5g-play', 'm5g-result'].forEach(function (p) {
+          var el = document.getElementById(p);
+          if (el) el.style.display = (p === id) ? 'block' : 'none';
+        });
+      }
+
+      function m5gRender() {
+        if (m5gIdx >= m5gDeck.length) { m5gFinish(); return; }
+        var item = m5gDeck[m5gIdx];
+        m5gBusy = false;
+
+        document.getElementById('m5g-counter').textContent = (m5gIdx + 1) + ' / ' + m5gDeck.length;
+        document.getElementById('m5g-bar').style.width = (m5gIdx / m5gDeck.length * 100) + '%';
+        document.getElementById('m5g-emoji').textContent = item.emoji;
+        document.getElementById('m5g-text').textContent = item.text;
+
+        var card = document.getElementById('m5g-card');
+        card.className = 'm5g-card';
+
+        var btns = document.querySelectorAll('#m5g-play .m5g-zbtn');
+        btns.forEach(function (b) { b.disabled = false; b.classList.remove('m5g-correct', 'm5g-wrong'); });
+
+        var fb = document.getElementById('m5g-feedback');
+        fb.className = 'm5g-feedback';
+        fb.textContent = '';
+      }
+
+      function m5gAnswer(zone) {
+        if (m5gBusy) return;
+        m5gBusy = true;
+
+        var item = m5gDeck[m5gIdx];
+        var isOk = (zone === item.zone);
+        var card = document.getElementById('m5g-card');
+        var fb = document.getElementById('m5g-feedback');
+        var btns = document.querySelectorAll('#m5g-play .m5g-zbtn');
+
+        btns.forEach(function (b) {
+          b.disabled = true;
+          var bZone = b.dataset.zone;
+          if (bZone === item.zone) b.classList.add('m5g-correct');
+          else if (bZone === zone && !isOk) b.classList.add('m5g-wrong');
+        });
+
+        if (typeof playGameFeedback === 'function') playGameFeedback(isOk ? 'ok' : 'nok');
+
+        if (isOk) {
+          m5gScore++;
+          card.classList.add('m5g-ok');
+          fb.className = 'm5g-feedback ok';
+        } else {
+          card.classList.add('m5g-err');
+          fb.className = 'm5g-feedback err';
+        }
+        fb.textContent = (isOk ? '✅ ' : '❌ ') + item.tip;
+
+        setTimeout(function () {
+          m5gIdx++;
+          m5gRender();
+        }, 1100);
+      }
+
+      function m5gFinish() {
+        document.getElementById('m5g-bar').style.width = '100%';
+        m5gShow('m5g-result');
+        var total = m5gDeck.length;
+        document.getElementById('m5g-score-num').textContent = m5gScore;
+        document.querySelector('#m5g-result .m5g-score-label').textContent = '/ ' + total;
+
+        var pct = Math.round(m5gScore / total * 100);
+        document.getElementById('m5g-score-ring').style.background =
+          'conic-gradient(#17c3b2 ' + pct + '%, rgba(255,255,255,0.08) ' + pct + '%)';
+
+        var msg = document.getElementById('m5g-result-msg');
+        if (m5gScore === total) {
+          msg.textContent = 'Triagem perfeita! Você domina manutenção, troca de bateria e restrições de segurança do Módulo 5.';
+        } else {
+          msg.textContent = 'Você acertou ' + m5gScore + ' de ' + total + '. Revise o conteúdo do Módulo 5 para classificar tudo certinho!';
+        }
+      }
+
+      window.startM5Game = function () {
+        m5gIdx = 0; m5gScore = 0; m5gBusy = false;
+        m5gShow('m5g-play');
+        m5gRender();
+      };
+
+      window.handleM5Answer = function (zone) {
+        m5gAnswer(zone);
+      };
+
+      window.resetM5Game = function () {
+        m5gShow('m5g-intro');
       };
 
     })();
