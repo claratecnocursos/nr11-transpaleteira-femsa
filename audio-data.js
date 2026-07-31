@@ -57,7 +57,7 @@ function cleanText(text) {
 function extractSlideText(slide) {
   const clone = slide.cloneNode(true);
   clone
-    .querySelectorAll('script, iframe, svg, .wave, button, style, .nav-btn, .zoom-btn')
+    .querySelectorAll('script, iframe, svg, .wave, button, style, .nav-btn, .zoom-btn, [id$="-mobile-section"]')
     .forEach((el) => el.remove());
 
   const custom = slide.getAttribute('data-audio-text');
@@ -121,24 +121,48 @@ function parseQm2Questions(html) {
 }
 
 function buildMod1Narration(deck) {
-  const zones = {
-    objective: 'Objetivo',
-    nr11: 'NR 11',
-    operator: 'Requisitos',
-    docs: 'Documentação',
-  };
-
   if (!deck.length) {
-    return 'Desafio NR-11 — Módulo 1. Legislação e Requisitos. Classifique quatro conceitos. Conclua o desafio para validar o módulo.';
+    return 'Quiz NR-11 — Módulo 1. Legislação e Requisitos. Responda a três perguntas rápidas sobre os conceitos legais do módulo e valide seu aprendizado.';
   }
 
   const parts = [
-    'Desafio. Tetraedro do Fogo. Desafio ATEX — Módulo 1. Classifique quatro situações nos elementos do Tetraedro do Fogo: Combustível, Comburente, Energia de Ativação e Reação em Cadeia. Toque na opção correta para avançar. Conclua o desafio para validar o módulo.',
+    'Quiz NR-11 — Módulo 1. Legislação e Requisitos. Responda a três perguntas rápidas sobre os conceitos legais do módulo e valide seu aprendizado.',
   ];
 
   deck.forEach((item, index) => {
-    parts.push(`Situação ${index + 1}: ${cleanText(item.text)}`);
-    parts.push(`Resposta correta: ${zones[item.zone] || item.zone}. ${cleanText(item.tip)}`);
+    parts.push(`Pergunta ${index + 1}: ${cleanText(item.text)}`);
+    (item.options || []).forEach((opt) => {
+      parts.push(`Alternativa ${opt.key}: ${cleanText(opt.text)}`);
+    });
+    parts.push(`Resposta correta: alternativa ${item.correct}. ${cleanText(item.tip)}`);
+  });
+
+  return parts.join(' ');
+}
+
+function parseMod2tfDeck(html) {
+  const match = html.match(/const\s+mod2tfDeck\s*=\s*(\[[\s\S]*?\n\s*\]);/);
+  if (!match) return [];
+
+  try {
+    return Function(`"use strict"; return (${match[1]});`)();
+  } catch {
+    return [];
+  }
+}
+
+function buildMod2tfNarration(deck) {
+  if (!deck.length) {
+    return 'Desafio Módulo 2 — Verdadeiro ou Falso. Responda seis afirmações sobre o equipamento e valide o que você aprendeu no módulo.';
+  }
+
+  const parts = [
+    'Desafio Módulo 2 — Verdadeiro ou Falso. Responda seis afirmações sobre o equipamento e valide o que você aprendeu no módulo.',
+  ];
+
+  deck.forEach((item, index) => {
+    parts.push(`Afirmação ${index + 1}: ${cleanText(item.text)}`);
+    parts.push(`Resposta correta: ${item.answer ? 'Verdadeiro' : 'Falso'}. ${cleanText(item.tip)}`);
   });
 
   return parts.join(' ');
@@ -176,6 +200,129 @@ function parseMod3BinaryDeck(html) {
   } catch {
     return [];
   }
+}
+
+function parseM3gDeck(html) {
+  const match = html.match(/var\s+m3gDeck\s*=\s*(\[[\s\S]*?\n\s*\]);/);
+  if (!match) return [];
+
+  try {
+    return Function(`"use strict"; return (${match[1]});`)();
+  } catch {
+    return [];
+  }
+}
+
+function buildM3gNarration(deck) {
+  if (!deck.length) {
+    return 'Desafio Módulo 3 — Missão do Operador. Leia cinco situações reais de operação e escolha a atitude correta.';
+  }
+
+  const letters = ['A', 'B', 'C'];
+  const parts = [
+    'Desafio Módulo 3 — Missão do Operador. Leia cinco situações reais de operação e escolha a atitude correta.',
+  ];
+
+  deck.forEach((item, index) => {
+    parts.push(`Situação ${index + 1}: ${cleanText(item.sit)}`);
+    item.opts.forEach((opt, optIndex) => {
+      parts.push(`Alternativa ${letters[optIndex] || optIndex + 1}: ${cleanText(opt)}`);
+    });
+    parts.push(`Resposta correta: alternativa ${letters[item.ans] || item.ans + 1}. ${cleanText(item.fb)}`);
+  });
+
+  return parts.join(' ');
+}
+
+function parseM4gDeck(html) {
+  const match = html.match(/var\s+m4gDeck\s*=\s*(\[[\s\S]*?\n\s*\]);/);
+  if (!match) return [];
+
+  try {
+    return Function(`"use strict"; return (${match[1]});`)();
+  } catch {
+    return [];
+  }
+}
+
+function buildM4gNarration(deck) {
+  if (!deck.length) {
+    return 'Desafio Módulo 4 — Turno Relâmpago. Responda Certo ou Errado para cinco afirmações sobre estabilidade de carga, paletes, tipos de carga e armazenamento.';
+  }
+
+  const parts = [
+    'Desafio Módulo 4 — Turno Relâmpago. Responda Certo ou Errado para cinco afirmações sobre estabilidade de carga, paletes, tipos de carga e armazenamento.',
+  ];
+
+  deck.forEach((item, index) => {
+    parts.push(`Afirmação ${index + 1}: ${cleanText(item.text)}`);
+    parts.push(`Resposta correta: ${item.ans ? 'Certo' : 'Errado'}. ${cleanText(item.tip)}`);
+  });
+
+  return parts.join(' ');
+}
+
+function parseM5gDeck(html) {
+  const match = html.match(/var\s+m5gDeck\s*=\s*(\[[\s\S]*?\n\s*\]);/);
+  if (!match) return [];
+
+  try {
+    return Function(`"use strict"; return (${match[1]});`)();
+  } catch {
+    return [];
+  }
+}
+
+function buildM5gNarration(deck) {
+  const zoneLabels = {
+    manutencao: 'Manutenção',
+    bateria: 'Troca de Bateria',
+    restricao: 'Restrição de Segurança',
+  };
+
+  if (!deck.length) {
+    return 'Desafio Módulo 5 — Central de Manutenção. Classifique cinco situações sobre manutenção, troca de bateria e restrições de segurança.';
+  }
+
+  const parts = [
+    'Desafio Módulo 5 — Central de Manutenção. Classifique cinco situações sobre manutenção, troca de bateria e restrições de segurança.',
+  ];
+
+  deck.forEach((item, index) => {
+    parts.push(`Situação ${index + 1}: ${cleanText(item.text)}`);
+    parts.push(`Setor correto: ${zoneLabels[item.zone] || item.zone}. ${cleanText(item.tip)}`);
+  });
+
+  return parts.join(' ');
+}
+
+function parseM6gRounds(html) {
+  const match = html.match(/var\s+m6gRounds\s*=\s*(\[[\s\S]*?\n\s*\]);/);
+  if (!match) return [];
+
+  try {
+    return Function(`"use strict"; return (${match[1]});`)();
+  } catch {
+    return [];
+  }
+}
+
+function buildM6gNarration(rounds) {
+  if (!rounds.length) {
+    return 'Desafio Final — Ordem Certa. Toque nos itens na ordem correta em cada rodada.';
+  }
+
+  const parts = [
+    'Desafio Final — Ordem Certa. Duas rodadas: toque nos itens na ordem correta.',
+  ];
+
+  rounds.forEach((round, index) => {
+    parts.push(`Rodada ${index + 1}: ${cleanText(round.title)}. ${cleanText(round.instr)}`);
+    const order = round.items.map((item) => cleanText(item.label)).join(', depois ');
+    parts.push(`Ordem correta: ${order}.`);
+  });
+
+  return parts.join(' ');
 }
 
 function parseQm4Questions(html) {
@@ -268,7 +415,17 @@ function buildManifest(htmlPath = HTML_PATH) {
       text = buildMod1Narration(mod1Deck);
     } else if (text === null && id === 's3f') {
       text = buildMod2Narration(qm2Questions);
-    } else if (text === undefined) {
+    } else if ((text === undefined || text === null) && id === 's-mod2-game') {
+      text = buildMod2tfNarration(parseMod2tfDeck(html));
+    } else if ((text === undefined || text === null) && id === 's-mod3-game') {
+      text = buildM3gNarration(parseM3gDeck(html));
+    } else if ((text === undefined || text === null) && id === 's-mod4-game') {
+      text = buildM4gNarration(parseM4gDeck(html));
+    } else if ((text === undefined || text === null) && id === 's-mod5-game') {
+      text = buildM5gNarration(parseM5gDeck(html));
+    } else if ((text === undefined || text === null) && id === 's-mod6-game') {
+      text = buildM6gNarration(parseM6gRounds(html));
+    } else if (text === undefined || text === null) {
       text = extractSlideText(slide);
     }
 

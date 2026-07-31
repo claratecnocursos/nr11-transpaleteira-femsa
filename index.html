@@ -11740,27 +11740,29 @@
           #s-mod3-rampas-rules { overflow: hidden; }
           #s-mod3-rampas-rules .rr-content {
             display: flex; flex-direction: column; align-items: center;
-            justify-content: center; gap: 14px;
-            padding: 32px 28px 100px; width: 100%; box-sizing: border-box;
+            justify-content: center; gap: clamp(8px,1.8cqh,14px);
+            padding: clamp(14px,3cqh,32px) clamp(16px,2.6cqw,28px) clamp(60px,9cqh,100px);
+            width: 100%; box-sizing: border-box;
+            container-type: size;
           }
           /* Banner */
           #s-mod3-rampas-rules .rr-alert {
-            display: flex; align-items: center; gap: 14px;
+            display: flex; align-items: center; gap: clamp(8px,1.4cqw,14px);
             background: rgba(23,195,178,0.06);
             border: 1px solid rgba(23,195,178,0.22);
-            border-radius: 14px; padding: 12px 20px;
+            border-radius: 14px; padding: clamp(8px,1.8cqh,12px) clamp(12px,2cqw,20px);
             width: 100%; max-width: 1220px; box-sizing: border-box;
           }
           /* Regras de ouro */
           #s-mod3-rampas-rules .rr-golden {
             display: grid; grid-template-columns: 1fr 1fr;
-            gap: 18px; width: 100%; max-width: 1220px;
+            gap: clamp(10px,1.6cqw,18px); width: 100%; max-width: 1220px;
           }
           #s-mod3-rampas-rules .rr-gold-card {
-            display: flex; align-items: center; gap: 20px;
+            display: flex; align-items: center; gap: clamp(10px,1.8cqw,20px);
             background: linear-gradient(135deg, rgba(255,199,0,0.08), rgba(255,199,0,0.03));
             border: 1px solid rgba(255,199,0,0.3);
-            border-radius: 20px; padding: 28px 30px;
+            border-radius: 20px; padding: clamp(14px,3.2cqh,28px) clamp(16px,2.6cqw,30px) clamp(26px,5cqh,36px);
             position: relative; overflow: hidden;
           }
           #s-mod3-rampas-rules .rr-gold-card::before {
@@ -11769,35 +11771,36 @@
             background: linear-gradient(90deg, #ffc837, #f6a623);
           }
           #s-mod3-rampas-rules .rr-gold-badge {
-            width: 56px; height: 56px; border-radius: 50%;
+            width: clamp(44px,8cqh,56px); height: clamp(44px,8cqh,56px);
+            border-radius: 50%;
             background: linear-gradient(135deg, #ffc837, #f6a623);
             display: flex; align-items: center; justify-content: center;
-            font-size: 26px; flex-shrink: 0;
+            font-size: clamp(21px,3.8cqh,26px); flex-shrink: 0;
             box-shadow: 0 6px 20px rgba(255,200,0,0.35);
           }
           #s-mod3-rampas-rules .rr-gold-label {
-            font-family: var(--font-h); font-size: 13px; font-weight: 900;
+            font-family: var(--font-h); font-size: clamp(12px,1.9cqh,13px); font-weight: 900;
             letter-spacing: 0.1em; text-transform: uppercase; color: #ffc837;
-            margin-bottom: 6px;
+            margin-bottom: clamp(2px,0.8cqh,6px);
           }
           #s-mod3-rampas-rules .rr-gold-title {
-            font-family: var(--font-h); font-size: 24px; font-weight: 900;
-            color: #ffffff; line-height: 1.3; margin-bottom: 6px;
+            font-family: var(--font-h); font-size: clamp(19px,3.5cqh,24px); font-weight: 900;
+            color: #ffffff; line-height: 1.3; margin-bottom: clamp(2px,0.8cqh,6px);
           }
           #s-mod3-rampas-rules .rr-gold-sub {
-            font-family: var(--font-p); font-size: 17px;
-            color: rgba(255,255,255,0.65); margin-top: 4px; line-height: 1.55;
+            font-family: var(--font-p); font-size: clamp(14px,2.5cqh,17px);
+            color: rgba(255,255,255,0.65); margin-top: 4px; line-height: 1.5;
           }
           /* Cards secundários */
           #s-mod3-rampas-rules .rr-grid {
             display: grid; grid-template-columns: repeat(4, 1fr);
-            gap: 16px; width: 100%; max-width: 1220px;
+            gap: clamp(8px,1.4cqw,16px); width: 100%; max-width: 1220px;
           }
           #s-mod3-rampas-rules .rr-card {
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 18px; padding: 26px 22px 24px;
-            display: flex; flex-direction: column; gap: 12px;
+            border-radius: 18px; padding: clamp(12px,3.4cqh,26px) clamp(12px,2.4cqw,22px) clamp(28px,5.6cqh,40px);
+            display: flex; flex-direction: column; gap: clamp(6px,1.4cqh,12px);
             position: relative; overflow: hidden;
             transition: transform 0.3s, border-color 0.3s;
             animation: ckFadeUp 0.5s ease both;
@@ -11815,14 +11818,14 @@
             background: linear-gradient(90deg, #e74c3c, #ff7675);
           }
           #s-mod3-rampas-rules .rr-icon {
-            font-size: 38px;
+            font-size: clamp(28px,5.2cqh,38px);
           }
           #s-mod3-rampas-rules .rr-ctitle {
-            font-family: var(--font-h); font-size: 19px; font-weight: 800; color: #fff;
+            font-family: var(--font-h); font-size: clamp(16.5px,2.9cqh,19px); font-weight: 800; color: #fff;
           }
           #s-mod3-rampas-rules .rr-ctext {
-            font-family: var(--font-p); font-size: 16px;
-            color: rgba(255,255,255,0.7); line-height: 1.55;
+            font-family: var(--font-p); font-size: clamp(13.5px,2.4cqh,16px);
+            color: rgba(255,255,255,0.7); line-height: 1.5;
           }
           #s-mod3-rampas-rules .rr-ctext strong { color: #17c3b2; }
           #s-mod3-rampas-rules .rr-card.rr-danger .rr-ctext strong { color: #ff7675; }
@@ -11833,8 +11836,8 @@
             cursor: pointer;
             -webkit-tap-highlight-color: transparent;
           }
-          #s-mod3-rampas-rules .rr-golden .rr-flip { min-height: 190px; }
-          #s-mod3-rampas-rules .rr-grid .rr-flip { min-height: 230px; }
+          #s-mod3-rampas-rules .rr-golden .rr-flip { min-height: clamp(120px,22cqh,190px); }
+          #s-mod3-rampas-rules .rr-grid .rr-flip { min-height: clamp(150px,27cqh,230px); }
           #s-mod3-rampas-rules .rr-flip-inner {
             position: relative;
             width: 100%; height: 100%;
@@ -11864,19 +11867,19 @@
             transform: rotateY(180deg);
             backface-visibility: hidden;
             -webkit-backface-visibility: hidden;
-            display: flex; flex-direction: column; justify-content: center; gap: 10px;
-            padding: 26px 28px; box-sizing: border-box; overflow: hidden;
+            display: flex; flex-direction: column; justify-content: center; gap: clamp(6px,1.2cqh,10px);
+            padding: clamp(14px,3cqh,26px) clamp(14px,2.6cqw,28px); box-sizing: border-box; overflow: hidden;
             background: linear-gradient(135deg, rgba(23,195,178,0.14), rgba(18,18,18,0.96));
             border: 1px solid rgba(23,195,178,0.4);
             border-radius: 18px;
           }
           #s-mod3-rampas-rules .rr-golden .rr-flip-back { border-radius: 20px; }
           #s-mod3-rampas-rules .rr-back-label {
-            font-family: var(--font-h); font-size: 13px; font-weight: 900;
+            font-family: var(--font-h); font-size: clamp(12px,1.9cqh,13px); font-weight: 900;
             letter-spacing: 0.08em; text-transform: uppercase; color: #4deae0;
           }
           #s-mod3-rampas-rules .rr-back-text {
-            font-family: var(--font-p); font-size: 16px; line-height: 1.55;
+            font-family: var(--font-p); font-size: clamp(13.5px,2.4cqh,16px); line-height: 1.5;
             color: rgba(255,255,255,0.9);
           }
           #s-mod3-rampas-rules .rr-flip-hint {
@@ -11979,8 +11982,8 @@
 
           <!-- Banner intro -->
           <div class="rr-alert">
-            <span style="font-size:24px; flex-shrink:0;">⛰️</span>
-            <p style="font-family:var(--font-p); font-size:19px; color:rgba(255,255,255,0.88); margin:0; line-height:1.5;">
+            <span style="font-size:clamp(19px,3.6cqh,24px); flex-shrink:0;">⛰️</span>
+            <p style="font-family:var(--font-p); font-size:clamp(15px,2.6cqh,19px); color:rgba(255,255,255,0.88); margin:0; line-height:1.45;">
               A operação em rampas exige <strong style="color:#ffc837;">técnicas específicas</strong>. Se o tráfego em rampa for inevitável, memorize as regras de ouro abaixo e <strong style="color:#17c3b2;">trabalhe sempre com segurança!</strong>
             </p>
           </div>
@@ -13430,17 +13433,17 @@
           #s-mod5-restricoes .m5r-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: clamp(8px, 1.8cqh, 20px) clamp(8px, 1.8cqw, 20px);
+            gap: clamp(12px, 2.4cqh, 28px) clamp(12px, 2.2cqw, 28px);
             width: 100%;
-            max-width: 1150px;
+            max-width: 1250px;
             margin: 0 auto;
           }
           #s-mod5-restricoes .m5r-card {
             position: relative;
             background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
             border: 1px solid rgba(255,255,255,0.09);
-            border-radius: clamp(10px,2.5cqh,20px);
-            padding: clamp(8px,3cqh,22px) clamp(10px,2.6cqw,20px);
+            border-radius: clamp(12px,3cqh,22px);
+            padding: clamp(16px,4.6cqh,34px) clamp(14px,3.4cqw,28px);
             overflow: hidden;
             transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
           }
@@ -13455,22 +13458,22 @@
             box-shadow: 0 18px 38px rgba(0,0,0,0.4);
           }
           #s-mod5-restricoes .m5r-icon {
-            width: clamp(26px,8cqh,46px); height: clamp(26px,8cqh,46px);
-            border-radius: clamp(8px,2cqh,14px);
+            width: clamp(36px,10cqh,60px); height: clamp(36px,10cqh,60px);
+            border-radius: clamp(10px,2.4cqh,16px);
             background: color-mix(in srgb, var(--m5r-accent) 18%, transparent);
             border: 1px solid color-mix(in srgb, var(--m5r-accent) 45%, transparent);
             display: flex; align-items: center; justify-content: center;
-            font-size: clamp(13px,3.6cqh,22px);
-            margin-bottom: clamp(4px,1.8cqh,12px);
+            font-size: clamp(18px,4.6cqh,28px);
+            margin-bottom: clamp(8px,2.4cqh,18px);
           }
           #s-mod5-restricoes .m5r-title {
             font-family: var(--font-h); font-weight: 800;
-            font-size: clamp(10.5px,2.6cqh,15.5px); color: var(--white);
-            margin-bottom: clamp(2px,1cqh,6px); line-height: 1.25;
+            font-size: clamp(15px,3.4cqh,20px); color: var(--white);
+            margin-bottom: clamp(4px,1.4cqh,9px); line-height: 1.28;
           }
           #s-mod5-restricoes .m5r-text {
-            font-family: var(--font-p); font-size: clamp(9px,2.1cqh,12.5px);
-            color: rgba(255,255,255,0.7); line-height: 1.35;
+            font-family: var(--font-p); font-size: clamp(12.5px,2.7cqh,15.5px);
+            color: rgba(255,255,255,0.7); line-height: 1.45;
           }
           @media (max-width: 900px) {
             #s-mod5-restricoes .m5r-grid { grid-template-columns: repeat(2, 1fr); }
@@ -13783,6 +13786,469 @@
               <div class="r-status ap" style="display:inline-block; padding:6px 18px; font-size:13px; margin-bottom:14px; font-weight:700;">Módulo 5 — Manutenção e Baterias Validadas</div>
               <p id="m5g-result-msg" style="color:rgba(255,255,255,0.88); font-size:15px; line-height:1.55; margin-bottom:22px; max-width:480px; margin-left:auto; margin-right:auto;"></p>
               <button class="btn-retry" onclick="resetM5Game()" style="background:var(--white); color:var(--black); font-weight:800; border-radius:99px; padding:12px 32px;">JOGAR NOVAMENTE</button>
+            </div>
+
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── MÓDULO 6 INTRO ── -->
+      <section class="slide mod-intro-slide" id="s-mod6">
+        <div class="content-area mod-intro-area">
+          <div class="mod-intro-inner">
+            <div class="mod-intro-badge">Início do Módulo</div>
+            <div class="mod-intro-title">MÓDULO 6</div>
+            <div class="mod-intro-sub">Gestão de Riscos, Emergências e EPIs</div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,65 C360,20 720,90 1080,40 C1260,15 1390,70 1440,60 L1440,100 L0,100 Z"
+              fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S-MOD6-EPIS: CONTEÚDO — Proteção à Sua Saúde Física (EPIs) ── -->
+      <section class="slide" id="s-mod6-epis">
+        <style>
+          #s-mod6-epis .content-area {
+            display: flex; align-items: center; justify-content: center;
+            container-type: size;
+          }
+          #s-mod6-epis .m6e-wrap { width: 100%; max-width: 1080px; margin: 0 auto; }
+          #s-mod6-epis .m6e-intro {
+            text-align: center; color: rgba(255,255,255,0.75);
+            font-family: var(--font-p); font-size: clamp(14px,1.8cqh,16.5px);
+            line-height: 1.6; max-width: 900px; margin: 0 auto clamp(14px,3cqh,24px);
+          }
+          #s-mod6-epis .m6e-layout {
+            display: grid; grid-template-columns: 1.1fr 1fr;
+            gap: clamp(16px,2.5cqw,32px); align-items: stretch;
+          }
+          #s-mod6-epis .m6e-img-box {
+            position: relative; border-radius: 22px; overflow: hidden;
+            box-shadow: 0 24px 50px rgba(0,0,0,0.45);
+            border: 1px solid rgba(23,195,178,0.28);
+            min-height: clamp(160px, 34cqh, 340px);
+          }
+          #s-mod6-epis .m6e-img-box img {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+          }
+          #s-mod6-epis .m6e-cards {
+            display: flex; flex-direction: column; justify-content: center;
+            gap: clamp(8px,1.8cqh,16px);
+          }
+          #s-mod6-epis .m6e-card {
+            display: flex; gap: 16px; align-items: flex-start;
+            background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 16px; padding: clamp(12px,2.6cqh,20px) clamp(14px,2.2vw,20px);
+          }
+          #s-mod6-epis .m6e-icon {
+            width: clamp(42px,8.5cqh,56px); height: clamp(42px,8.5cqh,56px);
+            font-size: clamp(21px,4cqh,28px);
+            border-radius: 12px; background: rgba(23,195,178,0.15);
+            border: 1px solid rgba(23,195,178,0.4);
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+          }
+          #s-mod6-epis .m6e-title {
+            font-family: var(--font-h); font-weight: 800;
+            font-size: clamp(15.5px,2cqh,19.5px); color: var(--white); margin-bottom: 5px;
+          }
+          #s-mod6-epis .m6e-text {
+            font-family: var(--font-p); font-size: clamp(13px,1.7cqh,15px);
+            color: rgba(255,255,255,0.7); line-height: 1.5;
+            min-height: 3em;
+          }
+          #s-mod6-epis .m6e-card { min-height: clamp(72px, 13cqh, 96px); }
+          #s-mod6-epis .m6e-callout {
+            margin-top: clamp(14px,3cqh,24px);
+            display: flex; align-items: center; justify-content: center; gap: 12px;
+            background: linear-gradient(135deg, rgba(23,195,178,0.14), rgba(23,195,178,0.03));
+            border: 1px solid rgba(23,195,178,0.35); border-radius: 14px;
+            padding: clamp(10px,2.4cqh,16px) clamp(16px,3cqw,20px);
+          }
+          #s-mod6-epis .m6e-callout-icon { font-size: clamp(18px,3.8cqh,24px); flex-shrink: 0; }
+          #s-mod6-epis .m6e-callout p {
+            font-family: var(--font-h); font-weight: 700; font-size: clamp(14px,1.8cqh,17px);
+            color: var(--white); margin: 0;
+          }
+          @media (max-width: 760px) {
+            #s-mod6-epis .m6e-layout { grid-template-columns: 1fr; }
+            #s-mod6-epis .m6e-img-box { min-height: clamp(120px, 22cqh, 220px); }
+          }
+        </style>
+
+        <div class="top-bar">
+          <span class="section-tag">🦺 Segurança</span>
+          <div class="slide-title" style="margin-top:6px">EPIs: <span>Proteção à Sua Saúde Física</span></div>
+          <div class="slide-subtitle">Gestão de Riscos, Emergências e EPIs</div>
+        </div>
+
+        <div class="content-area">
+          <div class="m6e-wrap">
+            <p class="m6e-intro">Na operação logística, a segurança começa antes mesmo de ligar a máquina. Por lei, a empresa fornece, orienta, treina e exige o uso de todos os EPIs necessários para a função — por isso, <strong>o uso correto é seu dever obrigatório</strong>.</p>
+            <div class="m6e-layout">
+              <div class="m6e-img-box">
+                <img src="img/epis.jpeg" alt="Equipamentos de Proteção Individual">
+              </div>
+              <div class="m6e-cards">
+                <div class="m6e-card">
+                  <div class="m6e-icon">🥾</div>
+                  <div>
+                    <h3 class="m6e-title">Botina de Segurança</h3>
+                    <p class="m6e-text">Protege seus pés contra impactos de cargas durante a movimentação.</p>
+                  </div>
+                </div>
+                <div class="m6e-card">
+                  <div class="m6e-icon">🧤</div>
+                  <div>
+                    <h3 class="m6e-title">Luvas de Proteção</h3>
+                    <p class="m6e-text">Fundamentais para o manuseio firme do timão e dos cabos.</p>
+                  </div>
+                </div>
+                <div class="m6e-card">
+                  <div class="m6e-icon">🦻</div>
+                  <div>
+                    <h3 class="m6e-title">Protetor Auricular</h3>
+                    <p class="m6e-text">Obrigatório para atuar com segurança em áreas com ruído elevado.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="m6e-callout">
+              <span class="m6e-callout-icon">✅</span>
+              <p>Use-os sempre e de forma correta em todos os turnos de trabalho!</p>
+            </div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S-MOD6-VIDEO: VÍDEO — Protocolo de Emergências e Combate a Incêndio ── -->
+      <section class="slide video-slide" id="s-mod6-video">
+        <div class="top-bar">
+          <div><span class="section-tag">📹 Vídeo</span>
+            <div class="slide-title" style="margin-top:6px">Protocolo de Emergências <span>e Combate a Incêndio</span></div>
+            <div class="slide-subtitle">Gestão de Riscos, Emergências e EPIs</div>
+          </div>
+        </div>
+        <div class="content-area" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <div class="video-wrap">
+            <div class="video-box">
+              <iframe id="panda-904123f2-5d9a-4aa6-9de2-aed5c3581d25"
+                src="https://player-vz-d35edf2a-8e7.tv.pandavideo.com.br/embed/?v=904123f2-5d9a-4aa6-9de2-aed5c3581d25"
+                frameborder="0" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen="true" fetchpriority="high"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+                title="Protocolo de Emergências e Combate a Incêndio — NR11 - OPERADOR DE TRANSPALETEIRA">
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S-MOD6-EMERGENCIA: CONTEÚDO — Como Agir em Emergências ── -->
+      <section class="slide" id="s-mod6-emergencia">
+        <style>
+          #s-mod6-emergencia .content-area {
+            display: flex; align-items: center; justify-content: center;
+            container-type: size;
+          }
+          #s-mod6-emergencia .m6f-wrap { width: 100%; max-width: 1040px; margin: 0 auto; }
+          #s-mod6-emergencia .m6f-lead {
+            font-family: var(--font-h); font-weight: 800;
+            font-size: clamp(19px,2.8cqh,26px); color: var(--white);
+            text-align: center; margin-bottom: clamp(18px,3.6cqh,30px);
+          }
+          #s-mod6-emergencia .m6f-tips {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: clamp(14px,2.4vw,24px); margin-bottom: clamp(20px,4cqh,34px);
+          }
+          #s-mod6-emergencia .m6f-tip {
+            display: flex; gap: 16px; align-items: flex-start;
+            background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
+            border: 1px solid rgba(231,76,60,0.3);
+            border-radius: 18px; padding: clamp(18px,3.4cqh,26px) clamp(16px,2.4vw,22px);
+          }
+          #s-mod6-emergencia .m6f-tip-icon {
+            width: clamp(48px,9cqh,60px); height: clamp(48px,9cqh,60px);
+            font-size: clamp(23px,4.4cqh,30px); flex-shrink: 0;
+            border-radius: 12px; background: rgba(231,76,60,0.15);
+            border: 1px solid rgba(231,76,60,0.4);
+            display: flex; align-items: center; justify-content: center;
+          }
+          #s-mod6-emergencia .m6f-tip-title {
+            font-family: var(--font-h); font-weight: 800;
+            font-size: clamp(16px,2.2cqh,19.5px); color: var(--white); margin-bottom: 5px;
+          }
+          #s-mod6-emergencia .m6f-tip-text {
+            font-family: var(--font-p); font-size: clamp(13.5px,1.8cqh,15.5px);
+            color: rgba(255,255,255,0.7); line-height: 1.5;
+          }
+          #s-mod6-emergencia .m6f-protocol {
+            background: linear-gradient(160deg, rgba(255,159,67,0.1), rgba(255,255,255,0.02));
+            border: 1px solid rgba(255,159,67,0.35);
+            border-radius: 22px; padding: clamp(24px,4.4cqh,38px) clamp(20px,3.4cqw,36px);
+          }
+          #s-mod6-emergencia .m6f-protocol-label {
+            font-family: var(--font-h); font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em;
+            font-size: clamp(13px,1.7cqh,15.5px); color: #ff9f43;
+            text-align: center; margin-bottom: clamp(18px,3.2cqh,26px);
+          }
+          #s-mod6-emergencia .m6f-flow {
+            display: flex; align-items: center; justify-content: center;
+            gap: clamp(10px,2vw,24px); flex-wrap: wrap;
+            margin-bottom: clamp(20px,3.6cqh,32px);
+          }
+          #s-mod6-emergencia .m6f-flow-step {
+            display: flex; flex-direction: column; align-items: center; gap: 10px;
+          }
+          #s-mod6-emergencia .m6f-flow-icon {
+            width: clamp(60px,11.5cqh,82px); height: clamp(60px,11.5cqh,82px);
+            font-size: clamp(28px,5.8cqh,40px);
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 8px 20px rgba(231,76,60,0.4);
+          }
+          #s-mod6-emergencia .m6f-flow-step span {
+            font-family: var(--font-h); font-weight: 700;
+            font-size: clamp(14.5px,2cqh,17px); color: var(--white);
+          }
+          #s-mod6-emergencia .m6f-flow-arrow {
+            font-size: clamp(22px,3.4cqh,30px); color: rgba(255,159,67,0.6);
+            font-weight: 700;
+          }
+          #s-mod6-emergencia .m6f-extinguishers {
+            display: flex; align-items: center; justify-content: center;
+            gap: 14px; flex-wrap: wrap;
+            padding-top: clamp(16px,2.8cqh,22px);
+            border-top: 1px solid rgba(255,255,255,0.1);
+          }
+          #s-mod6-emergencia .m6f-ext-label {
+            font-family: var(--font-p); font-size: clamp(13.5px,1.8cqh,15.5px);
+            color: rgba(255,255,255,0.68);
+          }
+          #s-mod6-emergencia .m6f-ext-badge {
+            font-family: var(--font-h); font-weight: 800; font-size: clamp(13.5px,1.8cqh,15.5px);
+            color: #fff; background: rgba(23,195,178,0.16);
+            border: 1px solid rgba(23,195,178,0.45);
+            border-radius: 999px; padding: 8px 20px;
+          }
+          @media (max-width: 620px) {
+            #s-mod6-emergencia .m6f-tips { grid-template-columns: 1fr; }
+          }
+        </style>
+
+        <div class="top-bar">
+          <span class="section-tag">🧯 Emergência</span>
+          <div class="slide-title" style="margin-top:6px">Como Agir <span>em Emergências</span></div>
+          <div class="slide-subtitle">Gestão de Riscos, Emergências e EPIs</div>
+        </div>
+
+        <div class="content-area">
+          <div class="m6f-wrap">
+            <p class="m6f-lead">🚨 Saiba como agir em casos de emergências:</p>
+
+            <div class="m6f-tips">
+              <div class="m6f-tip">
+                <div class="m6f-tip-icon">🅿️</div>
+                <div>
+                  <h3 class="m6f-tip-title">Alarme de Incêndio</h3>
+                  <p class="m6f-tip-text">Ao ouvir o alarme, estacione o veículo em local seguro, deixando passagem livre.</p>
+                </div>
+              </div>
+              <div class="m6f-tip">
+                <div class="m6f-tip-icon">🧯</div>
+                <div>
+                  <h3 class="m6f-tip-title">Manejo de Extintores</h3>
+                  <p class="m6f-tip-text">Conheça o manejo de extintores — esse conhecimento pode salvar vidas.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="m6f-protocol">
+              <div class="m6f-protocol-label">Em caso de princípio de incêndio no veículo</div>
+              <div class="m6f-flow">
+                <div class="m6f-flow-step">
+                  <div class="m6f-flow-icon">🆘</div>
+                  <span>Peça ajuda</span>
+                </div>
+                <div class="m6f-flow-arrow">→</div>
+                <div class="m6f-flow-step">
+                  <div class="m6f-flow-icon">📢</div>
+                  <span>Comunique</span>
+                </div>
+                <div class="m6f-flow-arrow">→</div>
+                <div class="m6f-flow-step">
+                  <div class="m6f-flow-icon">🔥</div>
+                  <span>Combata as chamas</span>
+                </div>
+              </div>
+              <div class="m6f-extinguishers">
+                <span class="m6f-ext-label">Use o extintor adequado:</span>
+                <span class="m6f-ext-badge">Pó Químico</span>
+                <span class="m6f-ext-badge">CO₂</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,55 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="rgba(23, 195, 178,0.07)" />
+          </svg></div>
+      </section>
+
+      <!-- ── S-MOD6-GAME: DESAFIO FINAL — Ordem Certa ── -->
+      <section class="slide" id="s-mod6-game">
+        <style>
+          #s-mod6-game .content-area {
+            display: flex; align-items: center; justify-content: center;
+            container-type: size;
+          }
+          #s-mod6-game .m6g-wrap { width: 100%; max-width: clamp(360px, 68cqw, 820px); margin: 0 auto; }
+
+          #s-mod6-game #m6g-intro,
+          #s-mod6-game #m6g-result {
+            padding: clamp(24px,10cqh,64px) clamp(24px,6cqw,48px);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(23,195,178,0.28);
+            border-radius: clamp(16px,3cqw,26px);
+            box-shadow: 0 28px 64px rgba(0,0,0,0.4);
+            box-sizing: border-box;
+          }
+          #s-mod6-game #m6g-intro .ic-circle {
+            width: clamp(64px,20cqh,120px) !important;
+            height: clamp(64px,20cqh,120px) !important;
+            font-size: clamp(32px,10cqh,60px) !important;
+            margin: 0 auto clamp(20px,7cqh,44px) !important;
+          }
+          #s-mod6-game #m6g-intro h3 {
+            font-size: clamp(20px,6.5cqh,36px) !important;
+            margin-bottom: clamp(10px,3.5cqh,22px) !important;
+          }
+          #s-mod6-game #m6g-intro p {
+            font-size: clamp(13.5px,3cqh,17px) !important;
+            line-height: 1.5 !important;
+            margin-bottom: clamp(16px,8cqh,52px) !important;
+          }
+          #s-mod6-game #m6g-intro .btn-start {
+            padding: clamp(12px,3cqh,18px) clamp(28px,5cqw,44px) !important;
+            font-size: clamp(13px,2.2cqh,15px) !important;
+          }
+
+          #s-mod6-game .m6g-top-row {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 10px; gap: 8px; flex-wrap: wrap;
+          }
+          #s-mod6-game .m6g-pill {
+            font-family: var(--font-h); font-size: 13px; font-weight: 700;
+            color: var(--white); background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px;
+          }
+          #s-mod6-game .m6g-round-title {
+            text-align: center; font-family: var(--font-h); font-weight: 900;
+            font-size: clamp(18px,4.5cqh,26px); color: var(--white);
+            margin-bottom: 6px;
+          }
+          #s-mod6-game .m6g-round-instr {
+            text-align: center; font-family: var(--font-p);
+            font-size: clamp(12.5px,2cqh,14.5px); color: rgba(255,255,255,0.65);
+            margin-bottom: clamp(16px,3.4cqh,26px);
+          }
+
+          #s-mod6-game .m6g-items {
+            display: flex; flex-direction: column; gap: clamp(10px,2cqh,16px);
+          }
+          #s-mod6-game .m6g-item {
+            position: relative;
+            display: flex; align-items: center; gap: 14px;
+            background: rgba(255,255,255,0.04); border: 2px solid rgba(255,255,255,0.12);
+            border-radius: 16px; padding: clamp(12px,2.6cqh,20px) clamp(16px,2.6cqw,22px);
+            cursor: pointer; transition: all 0.2s ease;
+          }
+          #s-mod6-game .m6g-item:hover:not(.m6g-locked) {
+            border-color: rgba(23,195,178,0.5); background: rgba(23,195,178,0.06);
+          }
+          #s-mod6-game .m6g-item-emoji { font-size: clamp(22px,4.6cqh,30px); flex-shrink: 0; }
+          #s-mod6-game .m6g-item-label {
+            font-family: var(--font-h); font-weight: 700;
+            font-size: clamp(14px,2.2cqh,17px); color: var(--white);
+          }
+          #s-mod6-game .m6g-item-badge {
+            margin-left: auto; width: clamp(28px,5.4cqh,36px); height: clamp(28px,5.4cqh,36px);
+            border-radius: 50%; background: #27ae60; color: #fff;
+            display: none; align-items: center; justify-content: center;
+            font-family: var(--font-h); font-weight: 900; font-size: clamp(13px,2.4cqh,16px);
+            flex-shrink: 0;
+          }
+          #s-mod6-game .m6g-item.m6g-locked {
+            border-color: #27ae60; background: rgba(39,174,96,0.12); cursor: default;
+          }
+          #s-mod6-game .m6g-item.m6g-locked .m6g-item-badge { display: flex; }
+          #s-mod6-game .m6g-item.m6g-wrong {
+            border-color: #e74c3c; background: rgba(231,76,60,0.12);
+            animation: m6gShake 0.4s ease;
+          }
+          @keyframes m6gShake {
+            10%,90% { transform: translateX(-2px); } 20%,80% { transform: translateX(3px); }
+            30%,50%,70% { transform: translateX(-5px); } 40%,60% { transform: translateX(5px); }
+          }
+          #s-mod6-game .m6g-hint {
+            text-align: center; font-size: clamp(10.5px,1.6cqh,12.5px);
+            color: rgba(255,255,255,0.4); margin-top: clamp(14px,2.4cqh,18px);
+          }
+
+          #s-mod6-game .m6g-stars { font-size: clamp(26px,6cqh,40px); letter-spacing: 8px; margin-bottom: 8px; }
+        </style>
+
+        <div class="top-bar">
+          <span class="section-tag">🏆 Desafio Final</span>
+          <div class="slide-title" style="margin-top:6px">Ordem <span>Certa</span></div>
+          <div class="slide-subtitle">Gestão de Riscos, Emergências e EPIs</div>
+        </div>
+
+        <div class="content-area">
+          <div class="m6g-wrap">
+
+            <!-- INTRO -->
+            <div id="m6g-intro" style="text-align:center; animation: fadeIn 0.8s ease;">
+              <div class="ic-circle" style="margin:0 auto 22px; width:96px; height:96px; font-size:48px;">🔢</div>
+              <h3 style="font-family:var(--font-h); font-weight:900; color:var(--white);">Desafio Final — Ordem Certa</h3>
+              <p style="color:rgba(255,255,255,0.72);">
+                São <strong>2 rodadas rápidas</strong>. Toque nos itens na ordem correta: primeiro o protocolo de emergência,
+                depois a sequência de uso dos EPIs. Simples e direto — vamos lá!
+              </p>
+              <button class="btn-start" onclick="startM6Game()" style="padding:16px 42px; font-size:15px; text-transform:uppercase;">
+                INICIAR DESAFIO
+              </button>
+            </div>
+
+            <!-- PLAY -->
+            <div id="m6g-play" style="display:none;">
+              <div class="m6g-top-row">
+                <span class="m6g-pill" id="m6g-round-pill">Rodada 1 / 2</span>
+                <span class="m6g-pill" id="m6g-mistakes-pill">Erros: 0</span>
+              </div>
+              <div class="m6g-round-title" id="m6g-round-title">...</div>
+              <div class="m6g-round-instr" id="m6g-round-instr">...</div>
+              <div class="m6g-items" id="m6g-items"></div>
+              <p class="m6g-hint">Toque nos itens na ordem correta</p>
+            </div>
+
+            <!-- RESULT -->
+            <div id="m6g-result" style="display:none; text-align:center; animation:slideUp 0.6s ease;">
+              <div class="m6g-stars" id="m6g-stars">⭐⭐⭐</div>
+              <h3 style="font-family:var(--font-h); font-size:clamp(22px,4vw,28px); color:var(--gold); margin-bottom:8px; font-weight:900;">Desafio Concluído!</h3>
+              <div class="r-status ap" style="display:inline-block; padding:6px 18px; font-size:13px; margin-bottom:14px; font-weight:700;">Módulo 6 — Curso Finalizado</div>
+              <p id="m6g-result-msg" style="color:rgba(255,255,255,0.88); font-size:15px; line-height:1.55; margin-bottom:22px; max-width:480px; margin-left:auto; margin-right:auto;"></p>
+              <button class="btn-retry" onclick="resetM6Game()" style="background:var(--white); color:var(--black); font-weight:800; border-radius:99px; padding:12px 32px;">JOGAR NOVAMENTE</button>
             </div>
 
           </div>
@@ -15284,7 +15750,9 @@
       if (!btnFwd) return;
       if (currentSlide === TOTAL - 1) {
         btnFwd.disabled = true;
+        btnFwd.style.display = 'none';
       } else {
+        btnFwd.style.display = '';
         btnFwd.disabled = !isSlideCompleted(currentSlide);
       }
     }
@@ -18455,6 +18923,146 @@
 
       window.resetM5Game = function () {
         m5gShow('m5g-intro');
+      };
+
+    })();
+
+    /* ════════════════════════════════════════
+       DESAFIO FINAL MÓDULO 6 — Ordem Certa
+    ════════════════════════════════════════ */
+    (function () {
+      var m6gRoundIdx  = 0;
+      var m6gExpected  = 0;
+      var m6gMistakes  = 0;
+      var m6gBusy      = false;
+      var m6gDisplay   = [];
+
+      var m6gRounds = [
+        {
+          title: 'Protocolo de Emergência',
+          instr: 'Toque na ordem correta, em caso de princípio de incêndio:',
+          items: [
+            { emoji: '🆘', label: 'Peça ajuda' },
+            { emoji: '📢', label: 'Comunique' },
+            { emoji: '🧯', label: 'Combata as chamas' }
+          ]
+        },
+        {
+          title: 'Uso dos EPIs',
+          instr: 'Toque na ordem certa, dos pés à cabeça:',
+          items: [
+            { emoji: '🥾', label: 'Botina de Segurança' },
+            { emoji: '🧤', label: 'Luvas de Proteção' },
+            { emoji: '🦻', label: 'Protetor Auricular' }
+          ]
+        }
+      ];
+
+      function m6gShuffle(arr) {
+        for (var i = arr.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+        }
+        return arr;
+      }
+
+      function m6gShow(id) {
+        ['m6g-intro', 'm6g-play', 'm6g-result'].forEach(function (p) {
+          var el = document.getElementById(p);
+          if (el) el.style.display = (p === id) ? 'block' : 'none';
+        });
+      }
+
+      function m6gUpdatePills() {
+        document.getElementById('m6g-round-pill').textContent = 'Rodada ' + (m6gRoundIdx + 1) + ' / ' + m6gRounds.length;
+        document.getElementById('m6g-mistakes-pill').textContent = 'Erros: ' + m6gMistakes;
+      }
+
+      function m6gRenderRound() {
+        var round = m6gRounds[m6gRoundIdx];
+        m6gExpected = 0;
+        m6gBusy = false;
+
+        document.getElementById('m6g-round-title').textContent = round.title;
+        document.getElementById('m6g-round-instr').textContent = round.instr;
+        m6gUpdatePills();
+
+        m6gDisplay = m6gShuffle(round.items.map(function (item, correctIndex) {
+          return { emoji: item.emoji, label: item.label, correctIndex: correctIndex };
+        }));
+
+        var box = document.getElementById('m6g-items');
+        box.innerHTML = '';
+        m6gDisplay.forEach(function (item, idx) {
+          var el = document.createElement('div');
+          el.className = 'm6g-item';
+          el.dataset.idx = idx;
+          el.innerHTML =
+            '<span class="m6g-item-emoji">' + item.emoji + '</span>' +
+            '<span class="m6g-item-label">' + item.label + '</span>' +
+            '<span class="m6g-item-badge"></span>';
+          el.addEventListener('click', function () { m6gTapItem(idx); });
+          box.appendChild(el);
+        });
+      }
+
+      function m6gItemEl(idx) {
+        return document.querySelector('#m6g-items .m6g-item[data-idx="' + idx + '"]');
+      }
+
+      function m6gTapItem(idx) {
+        if (m6gBusy) return;
+        var el = m6gItemEl(idx);
+        if (!el || el.classList.contains('m6g-locked')) return;
+
+        var item = m6gDisplay[idx];
+        if (item.correctIndex === m6gExpected) {
+          el.classList.add('m6g-locked');
+          el.querySelector('.m6g-item-badge').textContent = (m6gExpected + 1);
+          if (typeof playGameFeedback === 'function') playGameFeedback('ok');
+          m6gExpected++;
+
+          if (m6gExpected === m6gDisplay.length) {
+            m6gBusy = true;
+            setTimeout(function () {
+              m6gRoundIdx++;
+              if (m6gRoundIdx >= m6gRounds.length) {
+                m6gFinish();
+              } else {
+                m6gRenderRound();
+              }
+            }, 700);
+          }
+        } else {
+          m6gMistakes++;
+          m6gUpdatePills();
+          if (typeof playGameFeedback === 'function') playGameFeedback('nok');
+          el.classList.add('m6g-wrong');
+          setTimeout(function () { el.classList.remove('m6g-wrong'); }, 400);
+        }
+      }
+
+      function m6gFinish() {
+        m6gShow('m6g-result');
+        var stars = m6gMistakes === 0 ? 3 : (m6gMistakes <= 2 ? 2 : 1);
+        document.getElementById('m6g-stars').textContent = '⭐'.repeat(stars) + '☆'.repeat(3 - stars);
+
+        var msg = document.getElementById('m6g-result-msg');
+        if (m6gMistakes === 0) {
+          msg.textContent = 'Sequência perfeita, sem nenhum erro! Você concluiu o curso NR-11 — Operador de Transpaleteira com louvor. Parabéns!';
+        } else {
+          msg.textContent = 'Você completou as 2 rodadas com ' + m6gMistakes + ' erro(s) e finalizou o curso NR-11 — Operador de Transpaleteira. Parabéns pela dedicação!';
+        }
+      }
+
+      window.startM6Game = function () {
+        m6gRoundIdx = 0; m6gMistakes = 0;
+        m6gShow('m6g-play');
+        m6gRenderRound();
+      };
+
+      window.resetM6Game = function () {
+        m6gShow('m6g-intro');
       };
 
     })();

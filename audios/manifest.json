@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-07T12:30:27.541Z",
+  "generatedAt": "2026-07-31T17:31:18.431Z",
   "source": "index.html",
   "audioDir": "audios",
   "slides": [
@@ -42,7 +42,7 @@
       "title": "A Norma NR 11 e os Equipamentos Motorizados",
       "file": "audios/s2b.mp3",
       "text": "Vídeo. A Norma NR 11 e os Equipamentos Motorizados. Fundamentos, Legislação e Requisitos. Assista ao vídeo e conheça as exigências legais e a importância do treinamento de segurança na operação de transpaleteiras e outros equipamentos motorizados de movimentação de materiais. Avance quando concluir.",
-      "audioReady": false
+      "audioReady": true
     },
     {
       "index": 5,
@@ -50,7 +50,7 @@
       "title": "Habilitação e o Cartão de Identificação",
       "file": "audios/s2b2.mp3",
       "text": "Vídeo. Habilitação e o Cartão de Identificação. Fundamentos, Legislação e Requisitos. Assista ao vídeo sobre habilitação e o porte obrigatório do cartão de identificação na operação de transpaleteiras. Avance quando concluir.",
-      "audioReady": false
+      "audioReady": true
     },
     {
       "index": 6,
@@ -58,7 +58,7 @@
       "title": "O Cartão de Identificação",
       "file": "audios/s2b3.mp3",
       "text": "Legislação. O Cartão de Identificação. Conforme o item 11.1.6 da NR-11, os operadores de equipamentos de transporte motorizado deverão ser habilitados e só poderão dirigir se durante o horário de trabalho portarem um cartão de identificação, com o nome e fotografia, em lugar visível. Veja a simulação do cartão de identificação à direita, com os dados do operador, fotografia, número de chapa e o respectivo setor de trabalho. Avance quando concluir.",
-      "audioReady": false
+      "audioReady": true
     },
     {
       "index": 7,
@@ -66,23 +66,23 @@
       "title": "Validade do Cartão e Responsabilidade do Operador",
       "file": "audios/s2c.mp3",
       "text": "Vídeo. Validade do Cartão e Responsabilidade do Operador. Fundamentos, Legislação e Requisitos. Assista ao vídeo sobre a validade do cartão de identificação e a responsabilidade do operador. Avance quando concluir.",
-      "audioReady": false
+      "audioReady": true
     },
     {
       "index": 8,
       "id": "s2d",
       "title": "Requisitos para Operação",
       "file": "audios/s2d.mp3",
-      "text": "Slide 9. Requisitos para Operação",
-      "audioReady": false
+      "text": "Diretrizes da NR-11 Requisitos para Operação De acordo com a norma regulamentadora, o operador de equipamentos de transporte motorizado deverá: Atenção: O não cumprimento de qualquer um destes requisitos impede o operador de conduzir transpaleteiras na planta. Aptidão Médica Estar devidamente apto do ponto de vista médico (saúde física e mental atestada por exames ocupacionais específicos). Treinamento Ter participado com aproveitamento de treinamento teórico e prático específico para a condução do equipamento. Reciclagem Participar de reciclagens anuais para renovação das orientações de segurança e atualização de competências.",
+      "audioReady": true
     },
     {
       "index": 9,
       "id": "s2e",
       "title": "Legislação e Requisitos",
       "file": "audios/s2e.mp3",
-      "text": "Desafio. Tetraedro do Fogo. Desafio ATEX — Módulo 1. Classifique quatro situações nos elementos do Tetraedro do Fogo: Combustível, Comburente, Energia de Ativação e Reação em Cadeia. Toque na opção correta para avançar. Conclua o desafio para validar o módulo. Situação 1: De acordo com a NR 11, o que deve ser indicado de forma visível em todo equipamento de transporte de materiais? Resposta correta: undefined. Muito bem! Por lei, é obrigatório indicar a carga máxima de trabalho em local visível, e este limite nunca deve ser ultrapassado. Situação 2: Para dirigir a transpaleteira durante todo o horário de trabalho, qual é a exigência legal sobre o crachá? Resposta correta: undefined. Perfeito! A NR 11 exige que o crachá com seu nome e foto esteja em local bem visível durante todo o expediente de trabalho. Situação 3: Qual é o prazo de validade da autorização e quem é o responsável por acompanhar esse vencimento? Resposta correta: undefined. Excepcional! O cartão é válido por exatamente 1 ano. O operador deve ser proativo e avisar a chefia quando estiver perto do vencimento.",
-      "audioReady": false
+      "text": "Quiz NR-11 — Módulo 1. Legislação e Requisitos. Responda a três perguntas rápidas sobre os conceitos legais do módulo e valide seu aprendizado. Pergunta 1: De acordo com a NR 11, o que deve ser indicado de forma visível em todo equipamento de transporte de materiais? Alternativa A: A data do próximo exame médico obrigatório do operador. Alternativa B: A carga máxima de trabalho permitida (limite que nunca deve ser ultrapassado). Alternativa C: O nome completo do fabricante e a cor da máquina. Resposta correta: alternativa B. Muito bem! Por lei, é obrigatório indicar a carga máxima de trabalho em local visível, e este limite nunca deve ser ultrapassado. Pergunta 2: Para dirigir a transpaleteira durante todo o horário de trabalho, qual é a exigência legal sobre o crachá? Alternativa A: Portar o cartão de identificação com seu nome e foto em local bem visível. Alternativa B: Guardar a autorização física dentro da carteira pessoal no bolso. Alternativa C: Exibir a autorização digital apenas quando for solicitado pela fiscalização. Resposta correta: alternativa A. Perfeito! A NR 11 exige que o crachá com seu nome e foto esteja em local bem visível durante todo o expediente de trabalho. Pergunta 3: Qual é o prazo de validade da autorização e quem é o responsável por acompanhar esse vencimento? Alternativa A: A validade é vitalícia e não necessita de exames ou acompanhamento. Alternativa B: A validade é de 1 ano, sendo o próprio operador o responsável por monitorar a data e avisar a chefia. Alternativa C: A validade é de 3 anos, cabendo exclusivamente ao RH da empresa monitorar. Resposta correta: alternativa B. Excepcional! O cartão é válido por exatamente 1 ano. O operador deve ser proativo e avisar a chefia quando estiver perto do vencimento.",
+      "audioReady": true
     },
     {
       "index": 10,
@@ -90,7 +90,7 @@
       "title": "MÓDULO 2",
       "file": "audios/s-mod2.mp3",
       "text": "Início do Módulo 2. Conhecendo o Equipamento.",
-      "audioReady": false
+      "audioReady": true
     },
     {
       "index": 11,
@@ -98,7 +98,7 @@
       "title": "Conhecendo a Transpaleteira",
       "file": "audios/s-mod2-video.mp3",
       "text": "Vídeo. Conhecendo a Transpaleteira. Conhecendo o Equipamento. Assista ao vídeo sobre os componentes principais e o funcionamento da transpaleteira. Avance quando concluir.",
-      "audioReady": false
+      "audioReady": true
     },
     {
       "index": 12,
@@ -106,23 +106,295 @@
       "title": "Transpaleteiras Elétricas e Tripuladas",
       "file": "audios/s-mod2-video2.mp3",
       "text": "Vídeo. Transpaleteiras Elétricas e Tripuladas. Conhecendo o Equipamento. Assista ao vídeo sobre as transpaleteiras elétricas e tripuladas. Avance quando concluir.",
-      "audioReady": false
+      "audioReady": true
     },
     {
       "index": 13,
+      "id": "s-mod2-tipos",
+      "title": "Tipos de Transpaleteira",
+      "file": "audios/s-mod2-tipos.mp3",
+      "text": "Equipamento Tipos de Transpaleteira Conhecendo o Equipamento 01 Transpaleteira Manual Força humana · curtas distâncias 02 Transpaleteira Elétrica Motor elétrico · maior eficiência 03 Transpaleteira Elétrica Tripulada Operador a bordo · longos trajetos",
+      "audioReady": true
+    },
+    {
+      "index": 14,
       "id": "s-mod2-video3",
       "title": "Componentes Principais da Transpaleteira",
       "file": "audios/s-mod2-video3.mp3",
       "text": "Vídeo. Componentes Principais da Transpaleteira. Conhecendo o Equipamento. Assista ao vídeo sobre os componentes principais da transpaleteira. Avance quando concluir.",
-      "audioReady": false
+      "audioReady": true
     },
     {
-      "index": 14,
+      "index": 15,
       "id": "s-mod2-video4",
       "title": "O Painel de Controle e a Chave de Contato",
       "file": "audios/s-mod2-video4.mp3",
       "text": "Vídeo. O Painel de Controle e a Chave de Contato. Conhecendo o Equipamento. Assista ao vídeo sobre o painel de controle e a chave de contato. Avance quando concluir.",
-      "audioReady": false
+      "audioReady": true
+    },
+    {
+      "index": 16,
+      "id": "s-mod2-video5",
+      "title": "O Sistema de Freios e a Proibição do Reverso",
+      "file": "audios/s-mod2-video5.mp3",
+      "text": "Vídeo O Sistema de Freios e a Proibição do Reverso Conhecendo o Equipamento",
+      "audioReady": true
+    },
+    {
+      "index": 17,
+      "id": "s-mod2-game",
+      "title": "Verdadeiro ou Falso?",
+      "file": "audios/s-mod2-game.mp3",
+      "text": "Desafio Módulo 2 — Verdadeiro ou Falso. Responda seis afirmações sobre o equipamento e valide o que você aprendeu no módulo. Afirmação 1: A paleteira manual é ideal para longas distâncias e cargas muito pesadas, acima de 5 toneladas. Resposta correta: Falso. Falso! A paleteira manual é indicada para curtas distâncias em superfícies planas, com capacidade entre 1,5 e 3 toneladas. Afirmação 2: Na transpaleteira elétrica tripulada (jet), o operador trabalha em pé, sobre uma plataforma do próprio equipamento. Resposta correta: Verdadeiro. Verdadeiro! Esse modelo permite maior conforto e controle em trajetos longos, com capacidade entre 2 e 3 toneladas. Afirmação 3: Os garfos e as rodas de poliuretano fazem parte dos componentes principais da transpaleteira elétrica. Resposta correta: Verdadeiro. Verdadeiro! Os garfos sustentam a carga e as rodas de poliuretano garantem o movimento seguro do equipamento. Afirmação 4: É permitido deixar a chave de contato ligada ao se afastar da máquina, desde que por pouco tempo. Resposta correta: Falso. Falso! A chave de contato deve sempre ser desligada ao se afastar da máquina, evitando uso não autorizado e acidentes. Afirmação 5: A transpaleteira freia somente quando o timão está na posição vertical inicial ou na posição extrema horizontal. Resposta correta: Verdadeiro. Verdadeiro! São essas as duas posições do timão que acionam o freio mecânico e desligam a tração. Afirmação 6: O pulsar do timão para frente e para trás (reverso) deve ser usado como manobra de freio de emergência. Resposta correta: Falso. Falso! Nunca se deve usar o reverso como freio — utilize sempre as posições limites do timão para frear com segurança.",
+      "audioReady": true
+    },
+    {
+      "index": 18,
+      "id": "s-mod3",
+      "title": "MÓDULO 3",
+      "file": "audios/s-mod3.mp3",
+      "text": "Início do Módulo MÓDULO 3 Procedimentos Operacionais e Operação Segura",
+      "audioReady": true
+    },
+    {
+      "index": 19,
+      "id": "s-mod3-video",
+      "title": "Inspeção Pré-Uso e o Checklist Diário",
+      "file": "audios/s-mod3-video.mp3",
+      "text": "Vídeo Inspeção Pré-Uso e o Checklist Diário Procedimentos Operacionais e Operação Segura",
+      "audioReady": true
+    },
+    {
+      "index": 20,
+      "id": "s-mod3-checklist",
+      "title": "Inspeção Pré-Uso: Checklist do Operador",
+      "file": "audios/s-mod3-checklist.mp3",
+      "text": "Procedimentos Inspeção Pré-Uso: Checklist do Operador Procedimentos Operacionais e Operação Segura Antes de iniciar a operação, realize a inspeção pré-uso verificando cada item. Em caso de irregularidade, não opere o equipamento. 01 Fazer inspeção no início de cada turno antes de usar o equipamento. Obrigatório 02 Verificar a limpeza e se as placas de aviso e identificação estão intactas. 03 Verificar o nível de carga da bateria e se está bem fixa, com a trava de segurança no lugar. 04 Equipamento em manutenção não deve ser utilizado sem a liberação do mecânico. Atenção 05 Informar toda e qualquer ocorrência detectada à chefia imediata ou à manutenção, para evitar acidentes. Comunicar sempre",
+      "audioReady": true
+    },
+    {
+      "index": 21,
+      "id": "s-mod3-video2",
+      "title": "Postura Corporal, Visibilidade e Condução",
+      "file": "audios/s-mod3-video2.mp3",
+      "text": "Vídeo Postura Corporal, Visibilidade e Condução Procedimentos Operacionais e Operação Segura",
+      "audioReady": true
+    },
+    {
+      "index": 22,
+      "id": "s-mod3-video3",
+      "title": "Regras de Trânsito Interno e Preferências",
+      "file": "audios/s-mod3-video3.mp3",
+      "text": "Vídeo Regras de Trânsito Interno e Preferências Procedimentos Operacionais e Operação Segura",
+      "audioReady": true
+    },
+    {
+      "index": 23,
+      "id": "s-mod3-transit-rules",
+      "title": "Regras de Trânsito Interno",
+      "file": "audios/s-mod3-transit-rules.mp3",
+      "text": "Trânsito Regras de Trânsito Interno Procedimentos Operacionais e Operação Segura Na operação logística do dia a dia, a circulação segura exige disciplina e atenção constante. Conheça as regras essenciais de trânsito interno. Pedestres em Primeiro Dê sempre preferência absoluta aos pedestres. Evite conversões bruscas e circule com atenção redobrada em corredores compartilhados. Parada Obrigatória A parada é obrigatória em todos os cruzamentos e curvas, dando preferência a empilhadeiras e paleteiras carregadas. Sem \"Costurar\" Não tente costurar entre obstáculos. Circule por rotas livres e sinalize sua passagem antes de dar passagem para outra máquina. Condução Suave Mantenha postura adequada. Evite freadas e arrancadas bruscas. Reduza a velocidade em curvas e locais de pouca visibilidade. Buzina com Moderação Use a buzina somente quando estritamente necessário para alertar outras pessoas. Não buzine de forma excessiva ou em zonas de silêncio. Pisos com Risco Se o piso estiver molhado, com óleo ou irregular, reduza imediatamente a velocidade e redobre o cuidado para evitar derrapagens.",
+      "audioReady": true
+    },
+    {
+      "index": 24,
+      "id": "s-mod3-video4",
+      "title": "Técnicas de Manuseio e Transporte de Cargas",
+      "file": "audios/s-mod3-video4.mp3",
+      "text": "Vídeo Técnicas de Manuseio e Transporte de Cargas Procedimentos Operacionais e Operação Segura",
+      "audioReady": true
+    },
+    {
+      "index": 25,
+      "id": "s-mod3-video5",
+      "title": "Operação Segura em Rampas e Inclinações",
+      "file": "audios/s-mod3-video5.mp3",
+      "text": "Vídeo Operação Segura em Rampas e Inclinações Procedimentos Operacionais e Operação Segura",
+      "audioReady": true
+    },
+    {
+      "index": 26,
+      "id": "s-mod3-rampas-rules",
+      "title": "Operação Segura em Rampas",
+      "file": "audios/s-mod3-rampas-rules.mp3",
+      "text": "Rampas Operação Segura em Rampas Procedimentos Operacionais e Operação Segura A operação em rampas exige técnicas específicas. Se o tráfego em rampa for inevitável, memorize as regras de ouro abaixo e trabalhe sempre com segurança! ⬆ Regra de Ouro 1 Subindo a Rampa Mantenha a carga sempre à frente ao subir inclinações. Isso garante controle físico e evita deslizamentos. toque para saber por quê Por que isso importa Se a carga fosse na traseira ao subir, ela tamparia sua visão da pista à frente e poderia escorregar em direção ao operador em caso de perda de tração. ⬇ Regra de Ouro 2 Descendo a Rampa Mantenha a carga sempre atrás ao descer. Reduza sempre a velocidade e desça de forma controlada. toque para saber por quê Por que isso importa Descer com a carga à frente reduz sua visibilidade da pista e aumenta o risco de o equipamento ganhar velocidade descontrolada morro abaixo. Reduza a Velocidade Ao descer qualquer rampa, reduza sempre a velocidade. O controle do transpalete depende da sua ação antes de iniciar a descida. toque para o risco Risco real Excesso de velocidade na descida causa perda de controle da carga, tombamento do equipamento e colisões com pessoas ou estruturas. Verifique a Pista Certifique-se de que a pista esteja limpa e com boa aderência. As rodas precisam agarrar bem na superfície para evitar acidentes. toque para o risco Risco real Pisos molhados, com óleo ou detritos reduzem a aderência das rodas de poliuretano, causando derrapagem em rampas. Proibições em Rampas Nunca atravesse rampas na horizontal, nunca dê a volta sobre um declive e nunca estacione a paleteira em rampas. toque para a consequência Consequência Atravessar de lado, virar ou estacionar em rampa pode causar o tombamento lateral do equipamento e da carga. Lembre-se Sempre Desça devagar e com atenção total. A segurança em rampas começa com planejamento antes de iniciar qualquer manobra. toque para a dica Dica extra Na dúvida sobre a segurança da rampa, prefira um caminho alternativo ou peça auxílio de outro operador ou do supervisor.",
+      "audioReady": true
+    },
+    {
+      "index": 27,
+      "id": "s-mod3-video6",
+      "title": "Proibições Críticas e Parada de Emergência",
+      "file": "audios/s-mod3-video6.mp3",
+      "text": "Vídeo Proibições Críticas e Parada de Emergência Procedimentos Operacionais e Operação Segura",
+      "audioReady": true
+    },
+    {
+      "index": 28,
+      "id": "s-mod3-video7",
+      "title": "Estacionamento Seguro e Finalização de Turno",
+      "file": "audios/s-mod3-video7.mp3",
+      "text": "Vídeo Estacionamento Seguro e Finalização de Turno Procedimentos Operacionais e Operação Segura",
+      "audioReady": true
+    },
+    {
+      "index": 29,
+      "id": "s-mod3-game",
+      "title": "Missão do Operador",
+      "file": "audios/s-mod3-game.mp3",
+      "text": "Desafio Módulo 3 — Missão do Operador. Leia cinco situações reais de operação e escolha a atitude correta. Situação 1: Ao chegar no início do turno, você encontra a transpaleteira com uma etiqueta de manutenção. O que você deve fazer? Alternativa A: Reconectar a bateria e usar o equipamento normalmente. Alternativa B: Aguardar a liberação expressa do mecânico antes de qualquer uso. Alternativa C: Usar apenas para trajetos curtos, sem elevar a carga. Resposta correta: alternativa B. Correto! Equipamento em manutenção nunca deve ser usado sem liberação do mecânico. Situação 2: Durante o deslocamento com carga, qual é a posição correta do seu corpo em relação ao timão? Alternativa A: Ao lado do timão, para ter mais espaço de manobra. Alternativa B: Atrás do timão, empurrando o equipamento à frente. Alternativa C: À frente do timão, puxando e mantendo ampla visibilidade. Resposta correta: alternativa C. Correto! Transitar à frente do timão garante maior visibilidade e controle total. Situação 3: Você se aproxima de um cruzamento interno movimentado. Qual é a atitude correta? Alternativa A: Passar rapidamente para não atrasar o fluxo de trabalho. Alternativa B: Parar completamente e dar preferência a pedestres e empilhadeiras carregadas. Alternativa C: Buzinar continuamente e atravessar sem parar. Resposta correta: alternativa B. Correto! A parada é obrigatória em cruzamentos, sempre com preferência a pedestres. Situação 4: Um colega pede carona na transpaleteira enquanto você faz a movimentação de paletes. O que você faz? Alternativa A: Aceita, pois o percurso é curto e seguro. Alternativa B: Deixa o colega sentar sobre a bateria, que é mais estável. Alternativa C: Recusa imediatamente — dar carona é terminantemente proibido pela norma. Resposta correta: alternativa C. Correto! É proibido transportar passageiros ou permitir que sentem sobre a bateria. Situação 5: Você precisa descer uma rampa com carga. Qual é a orientação correta? Alternativa A: Descer com a carga à frente, em alta velocidade para ganhar tempo. Alternativa B: Atravessar a rampa na horizontal para reduzir a inclinação. Alternativa C: Descer de ré, com a carga atrás, em velocidade reduzida. Resposta correta: alternativa C. Correto! Ao descer rampas, a carga deve ficar atrás e a velocidade deve ser reduzida.",
+      "audioReady": true
+    },
+    {
+      "index": 30,
+      "id": "s-mod4",
+      "title": "MÓDULO 4",
+      "file": "audios/s-mod4.mp3",
+      "text": "Início do Módulo MÓDULO 4 Movimentação, Cargas e Armazenamento",
+      "audioReady": true
+    },
+    {
+      "index": 31,
+      "id": "s-mod4-video",
+      "title": "Estabilidade e Segurança da Carga",
+      "file": "audios/s-mod4-video.mp3",
+      "text": "Vídeo Estabilidade e Segurança da Carga Movimentação, Cargas e Armazenamento",
+      "audioReady": true
+    },
+    {
+      "index": 32,
+      "id": "s-mod4-video2",
+      "title": "Conhecendo os Paletes: Duas e Quatro Entradas",
+      "file": "audios/s-mod4-video2.mp3",
+      "text": "Vídeo Conhecendo os Paletes: Duas e Quatro Entradas Movimentação, Cargas e Armazenamento",
+      "audioReady": true
+    },
+    {
+      "index": 33,
+      "id": "s-mod4-paletes",
+      "title": "Dois Tipos de Palete",
+      "file": "audios/s-mod4-paletes.mp3",
+      "text": "Equipamento Dois Tipos de Palete Movimentação, Cargas e Armazenamento 01 Palete de Duas Entradas Aberturas apenas em lados opostos — acesso mais limitado para os garfos da transpaleteira. 02 Palete de Quatro Entradas Aberturas nos quatro lados — o mais versátil, ideal para corredores estreitos.",
+      "audioReady": true
+    },
+    {
+      "index": 34,
+      "id": "s-mod4-video3",
+      "title": "Classificação das Cargas no Treinamento",
+      "file": "audios/s-mod4-video3.mp3",
+      "text": "Vídeo Classificação das Cargas no Treinamento Movimentação, Cargas e Armazenamento",
+      "audioReady": true
+    },
+    {
+      "index": 35,
+      "id": "s-mod4-video4",
+      "title": "Regras de Armazenamento e Limites do Piso",
+      "file": "audios/s-mod4-video4.mp3",
+      "text": "Vídeo Regras de Armazenamento e Limites do Piso Movimentação, Cargas e Armazenamento",
+      "audioReady": true
+    },
+    {
+      "index": 36,
+      "id": "s-mod4-game",
+      "title": "Turno Relâmpago",
+      "file": "audios/s-mod4-game.mp3",
+      "text": "Desafio Módulo 4 — Turno Relâmpago. Responda Certo ou Errado para cinco afirmações sobre estabilidade de carga, paletes, tipos de carga e armazenamento. Afirmação 1: Cargas soltas ou instáveis podem ser transportadas sem problema, desde que o trajeto seja curto. Resposta correta: Errado. Cargas soltas ou instáveis nunca são permitidas — o equilíbrio deve ser garantido antes de mover. Afirmação 2: O palete de quatro entradas permite a inserção dos garfos por qualquer um dos quatro lados. Resposta correta: Certo. Correto! O palete de quatro entradas é o mais versátil, com abertura em todos os lados. Afirmação 3: Areia solta, sem contenção, pode ser transportada normalmente na transpaleteira. Resposta correta: Errado. Materiais a granel sem contenção, como areia solta ou líquidos livres, nunca devem ser transportados na transpaleteira. Afirmação 4: Bobinas e chapas soltas, sem embalagem individual, são classificadas como carga diversa. Resposta correta: Certo. Correto! Cargas diversas são transportadas sem embalagem, de forma individual, como bobinas e chapas. Afirmação 5: O material empilhado deve ficar a pelo menos 50 cm de distância das estruturas laterais do prédio. Resposta correta: Certo. Correto! O afastamento mínimo de 50 cm também vale para os corredores de circulação.",
+      "audioReady": true
+    },
+    {
+      "index": 37,
+      "id": "s-mod5",
+      "title": "MÓDULO 5",
+      "file": "audios/s-mod5.mp3",
+      "text": "Início do Módulo MÓDULO 5 Manutenção e Segurança com Baterias",
+      "audioReady": true
+    },
+    {
+      "index": 38,
+      "id": "s-mod5-manutencao",
+      "title": "Manutenção e Conservação da Transpaleteira",
+      "file": "audios/s-mod5-manutencao.mp3",
+      "text": "Conteúdo Manutenção e Conservação da Transpaleteira Manutenção e Segurança com Baterias 01 Importância da Manutenção Preventiva Com o cuidado constante com o equipamento, é possível evitar falhas inesperadas e aumentar a durabilidade da transpaleteira. 02 Checklist Diário Elaboração de um roteiro de inspeção diário, verificando o estado dos pneus, freios, bateria, nível de carga e possíveis vazamentos de fluido. 03 Problemas Comuns Identificar e relatar defeitos no sistema elétrico, freios, garfos e outros componentes antes que causem acidentes. 04 Ação em Caso de Falhas Ao identificar um problema técnico durante a operação, estacione imediatamente o equipamento em local seguro e relate o fato à chefia e à equipe de manutenção.",
+      "audioReady": true
+    },
+    {
+      "index": 39,
+      "id": "s-mod5-video",
+      "title": "Gestão da Carga e Ciclo de Vida da Bateria",
+      "file": "audios/s-mod5-video.mp3",
+      "text": "Vídeo Gestão da Carga e Ciclo de Vida da Bateria Manutenção e Segurança com Baterias",
+      "audioReady": true
+    },
+    {
+      "index": 40,
+      "id": "s-mod5-troca-bateria",
+      "title": "Passo a Passo Troca de Bateria",
+      "file": "audios/s-mod5-troca-bateria.mp3",
+      "text": "Procedimento Passo a Passo Troca de Bateria Manutenção e Segurança com Baterias 1 Confirme o nível de carga Ligue a chave e verifique a carga. 2 ⏻Desligue o equipamento Desligue na chave de ignição. 3 Abra a tampa e solte a trava Com cuidado, solte a trava de segurança. 4 Desconecte o cabo Segure firme pelo conector. 5 Retire a bateria antiga Atenção ao peso e ao equilíbrio. 6 Posicione a nova bateria No mesmo lugar da anterior. 7 Verifique a polaridade e conecte Conecte a bateria e o cabo elétrico. 8 Trave e feche a tampa Bateria carregada e trava acondicionada. 9 Conecte no carregador Bateria descarregada vai para recarga. Procedimento correto é garantia de um trabalho seguro!",
+      "audioReady": true
+    },
+    {
+      "index": 41,
+      "id": "s-mod5-video2",
+      "title": "Cuidados com a Água da Bateria e Controle Organizacional",
+      "file": "audios/s-mod5-video2.mp3",
+      "text": "Vídeo Cuidados com a Água da Bateria e Controle Organizacional Manutenção e Segurança com Baterias",
+      "audioReady": true
+    },
+    {
+      "index": 42,
+      "id": "s-mod5-restricoes",
+      "title": "Restrições no Uso da Bateria",
+      "file": "audios/s-mod5-restricoes.mp3",
+      "text": "Segurança Restrições no Uso da Bateria Manutenção e Segurança com Baterias Proibido Fumar e Fontes de Ignição Não fume, não use chamas de forma alguma nem produza fagulhas próximo a uma bateria — os riscos químicos são sérios. Evite Impactos Nunca permita que a bateria sofra impactos, para evitar danos internos à sua estrutura. Não Apoie Objetos Não coloque nenhum objeto, ferramenta ou pano sobre a bateria, evitando curto-circuito. Mantenha Limpa e Seca Mantenha o corpo da bateria sempre limpo e seco, para evitar corrosão e fuga de corrente à terra. Contato com Pele ou Olhos Se a solução ácida atingir olhos, pele ou roupas, lave imediatamente com água pura em abundância. Se os olhos forem atingidos, procure socorro médico sem demora. Derramamento Acidental Neutralize o ácido derramado com bicarbonato de sódio e água, até que pare de borbulhar.",
+      "audioReady": true
+    },
+    {
+      "index": 43,
+      "id": "s-mod5-game",
+      "title": "Central de Manutenção",
+      "file": "audios/s-mod5-game.mp3",
+      "text": "Desafio Módulo 5 — Central de Manutenção. Classifique cinco situações sobre manutenção, troca de bateria e restrições de segurança. Situação 1: Nunca fume, use chamas ou produza fagulhas próximo a uma bateria. Setor correto: Restrição de Segurança. É uma restrição de segurança — o risco químico de explosão é real. Situação 2: Elaborar um roteiro de inspeção diário, verificando pneus, freios, bateria e vazamentos. Setor correto: Manutenção. Isso é manutenção preventiva: o checklist diário evita falhas inesperadas. Situação 3: Confirme o nível de carga e depois desligue o equipamento na chave de ignição. Setor correto: Troca de Bateria. São os primeiros passos do procedimento de troca de bateria. Situação 4: Não coloque ferramentas ou panos sobre a bateria, para evitar curto-circuito. Setor correto: Restrição de Segurança. É uma restrição de segurança no manuseio da bateria. Situação 5: Ao terminar o processo, conecte a bateria descarregada no carregador. Setor correto: Troca de Bateria. É o passo final do procedimento de troca de bateria.",
+      "audioReady": true
+    },
+    {
+      "index": 44,
+      "id": "s-mod6",
+      "title": "MÓDULO 6",
+      "file": "audios/s-mod6.mp3",
+      "text": "Início do Módulo MÓDULO 6 Gestão de Riscos, Emergências e EPIs",
+      "audioReady": true
+    },
+    {
+      "index": 45,
+      "id": "s-mod6-epis",
+      "title": "EPIs: Proteção à Sua Saúde Física",
+      "file": "audios/s-mod6-epis.mp3",
+      "text": "Segurança EPIs: Proteção à Sua Saúde Física Gestão de Riscos, Emergências e EPIs Na operação logística, a segurança começa antes mesmo de ligar a máquina. Por lei, a empresa fornece, orienta, treina e exige o uso de todos os EPIs necessários para a função — por isso, o uso correto é seu dever obrigatório. Botina de Segurança Protege seus pés contra impactos de cargas durante a movimentação. Luvas de Proteção Fundamentais para o manuseio firme do timão e dos cabos. Protetor Auricular Obrigatório para atuar com segurança em áreas com ruído elevado. Use-os sempre e de forma correta em todos os turnos de trabalho!",
+      "audioReady": true
+    },
+    {
+      "index": 46,
+      "id": "s-mod6-video",
+      "title": "Protocolo de Emergências e Combate a Incêndio",
+      "file": "audios/s-mod6-video.mp3",
+      "text": "Vídeo Protocolo de Emergências e Combate a Incêndio Gestão de Riscos, Emergências e EPIs",
+      "audioReady": true
+    },
+    {
+      "index": 47,
+      "id": "s-mod6-emergencia",
+      "title": "Como Agir em Emergências",
+      "file": "audios/s-mod6-emergencia.mp3",
+      "text": "Emergência Como Agir em Emergências Gestão de Riscos, Emergências e EPIs Saiba como agir em casos de emergências: 🅿 Alarme de Incêndio Ao ouvir o alarme, estacione o veículo em local seguro, deixando passagem livre. Manejo de Extintores Conheça o manejo de extintores — esse conhecimento pode salvar vidas. Em caso de princípio de incêndio no veículo 🆘 Peça ajuda → Comunique → Combata as chamas Use o extintor adequado: Pó Químico CO₂",
+      "audioReady": true
+    },
+    {
+      "index": 48,
+      "id": "s-mod6-game",
+      "title": "Ordem Certa",
+      "file": "audios/s-mod6-game.mp3",
+      "text": "Desafio Final — Ordem Certa. Duas rodadas: toque nos itens na ordem correta. Rodada 1: Protocolo de Emergência. Toque na ordem correta, em caso de princípio de incêndio: Ordem correta: Peça ajuda, depois Comunique, depois Combata as chamas. Rodada 2: Uso dos EPIs. Toque na ordem certa, dos pés à cabeça: Ordem correta: Botina de Segurança, depois Luvas de Proteção, depois Protetor Auricular.",
+      "audioReady": true
     }
   ]
 }
