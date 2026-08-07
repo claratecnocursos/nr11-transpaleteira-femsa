@@ -11446,9 +11446,9 @@
           #s-mod3-transit-rules .tr-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 14px;
+            gap: 20px;
             width: 100%;
-            max-width: 1080px;
+            max-width: 1340px;
             margin: 0 auto;
           }
           #s-mod3-transit-rules .tr-card {
@@ -11514,8 +11514,8 @@
             display: flex; align-items: center; gap: 14px;
             background: rgba(23,195,178,0.06);
             border: 1px solid rgba(23,195,178,0.2);
-            border-radius: 14px; padding: 10px 18px;
-            width: 100%; max-width: 1080px; margin: 0 auto;
+            border-radius: 14px; padding: 14px 22px;
+            width: 100%; max-width: 1340px; margin: 0 auto;
             box-sizing: border-box;
           }
           @media screen and (max-width: 768px) and (orientation: portrait) {
@@ -11579,16 +11579,53 @@
             }
           }
           @media screen and (min-width: 769px) {
-            #s-mod3-transit-rules .tr-title { font-size: 16px; }
-            #s-mod3-transit-rules .tr-text  { font-size: 15px; }
-            #s-mod3-transit-rules .tr-alert-bar p { font-size: 16px !important; }
-            #s-mod3-transit-rules .tr-icon-wrap { width: 52px; height: 52px; font-size: 26px; }
-            #s-mod3-transit-rules .tr-card { padding: 22px 20px 18px; gap: 12px; }
+            #s-mod3-transit-rules .tr-title { font-size: 21px; }
+            #s-mod3-transit-rules .tr-text  { font-size: 18.5px; line-height: 1.5; }
+            #s-mod3-transit-rules .tr-alert-bar p { font-size: 19.5px !important; }
+            #s-mod3-transit-rules .tr-icon-wrap { width: 68px; height: 68px; font-size: 34px; border-radius: 16px; }
+            #s-mod3-transit-rules .tr-card { padding: 32px 28px 24px; gap: 18px; }
             #s-mod3-transit-rules .content-area {
               justify-content: center !important;
               padding-top: 32px !important;
               padding-bottom: 100px !important;
             }
+          }
+
+          /* ── Telas desktop mais baixas: encolhe tudo pra caber sem scroll ── */
+          @media (min-width: 769px) and (max-height: 820px) {
+            #s-mod3-transit-rules .top-bar { padding: 14px 120px 0 28px; }
+            #s-mod3-transit-rules .slide-title { font-size: 26px; margin-top: 4px; }
+            #s-mod3-transit-rules .slide-subtitle { font-size: 12px; margin-top: 2px; }
+            #s-mod3-transit-rules .content-area {
+              padding-top: 12px !important;
+              padding-bottom: 88px !important;
+              gap: 10px !important;
+            }
+            #s-mod3-transit-rules .tr-alert-bar { padding: 8px 16px; }
+            #s-mod3-transit-rules .tr-alert-bar p { font-size: 13.5px !important; line-height: 1.4 !important; }
+            #s-mod3-transit-rules .tr-grid { gap: 10px; }
+            #s-mod3-transit-rules .tr-card { padding: 14px 14px 12px; gap: 8px; }
+            #s-mod3-transit-rules .tr-icon-wrap { width: 38px; height: 38px; font-size: 19px; }
+            #s-mod3-transit-rules .tr-title { font-size: 14px !important; }
+            #s-mod3-transit-rules .tr-text  { font-size: 12.5px !important; line-height: 1.42; }
+          }
+
+          @media (min-width: 769px) and (max-height: 700px) {
+            #s-mod3-transit-rules .top-bar { padding: 10px 120px 0 28px; }
+            #s-mod3-transit-rules .slide-title { font-size: 21px; margin-top: 2px; }
+            #s-mod3-transit-rules .slide-subtitle { font-size: 11px; margin-top: 1px; }
+            #s-mod3-transit-rules .content-area {
+              padding-top: 8px !important;
+              padding-bottom: 80px !important;
+              gap: 8px !important;
+            }
+            #s-mod3-transit-rules .tr-alert-bar { padding: 6px 14px; }
+            #s-mod3-transit-rules .tr-alert-bar p { font-size: 12px !important; line-height: 1.35 !important; }
+            #s-mod3-transit-rules .tr-grid { gap: 8px; }
+            #s-mod3-transit-rules .tr-card { padding: 10px 12px 9px; gap: 5px; }
+            #s-mod3-transit-rules .tr-icon-wrap { width: 30px; height: 30px; font-size: 15px; }
+            #s-mod3-transit-rules .tr-title { font-size: 12px !important; }
+            #s-mod3-transit-rules .tr-text  { font-size: 10.8px !important; line-height: 1.32; }
           }
         </style>
 
@@ -11598,7 +11635,7 @@
           <div class="slide-subtitle">Procedimentos Operacionais e Operação Segura</div>
         </div>
 
-        <div class="content-area" style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; padding:14px 24px 0; width:100%; max-width:1080px; margin:0 auto; box-sizing:border-box;">
+        <div class="content-area" style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; padding:14px 24px 0; width:100%; max-width:1340px; margin:0 auto; box-sizing:border-box;">
 
           <!-- Banner topo -->
           <div class="tr-alert-bar">
@@ -14858,16 +14895,37 @@
     }
 
     /* ══════════════════════════════════════════
-       PANDA VIDEO — Liberação do Avançar
-       (libera 5s antes do fim do vídeo, via postMessage)
+       PANDA VIDEO — Trava anti-pular vídeo (NR)
+       Guarda o maior tempo já assistido (maxWatched) por vídeo
+       e força o player de volta caso detecte um salto para frente,
+       seja durante a reprodução (timeupdate) ou ao arrastar a barra
+       (seeking/seeked). Voltar no vídeo (rewind) é sempre permitido.
+       Só libera o Avançar quando faltar <= 3s pro fim, ou no "ended".
        ══════════════════════════════════════════ */
-    const pandaVideoDurations = new Map(); // iframe -> duration em segundos
-    const PANDA_UNLOCK_BEFORE_END = 5;
+    const pandaVideoState = new Map(); // iframe -> { maxWatched, duration, completed }
+    const PANDA_SKIP_TOLERANCE_TIMEUPDATE = 2.5; // tolerância no timeupdate (pulo durante reprodução)
+    const PANDA_SKIP_TOLERANCE_SEEK = 1.25;      // tolerância no seeking/seeked (arraste da barra)
+    const PANDA_COMPLETE_MARGIN = 3;             // libera quando faltam <= 3s pro fim
+
+    function getPandaState(iframe) {
+      let state = pandaVideoState.get(iframe);
+      if (!state) {
+        state = { maxWatched: 0, duration: 0, completed: false };
+        pandaVideoState.set(iframe, state);
+      }
+      return state;
+    }
+
+    function pandaForceSeek(iframe, time) {
+      if (!iframe || !iframe.contentWindow) return;
+      iframe.contentWindow.postMessage({ type: 'currentTime', parameter: time }, '*');
+    }
 
     function initPandaVideoBoxes() {
       document.querySelectorAll('iframe[src*="pandavideo.com"]').forEach((iframe) => {
         const box = iframe.closest('.video-box');
         if (box) box.classList.add('req-item');
+        getPandaState(iframe);
       });
     }
 
@@ -14891,19 +14949,43 @@
       if (!box) return;
       box.classList.add('req-item');
 
+      const state = getPandaState(iframe);
+      if (state.completed) return;
+
+      const reportedDuration = Number(
+        (data.video && data.video.duration) || data.duration || data.videoDuration || data.length || data.total
+      );
+      if (reportedDuration > 0) state.duration = reportedDuration;
+
       if (data.message === 'panda_ended') {
+        state.completed = true;
         markVideoComplete(box);
         return;
       }
 
-      if (data.message === 'panda_timeupdate') {
-        const reportedDuration = Number(data.duration || data.videoDuration || data.length || data.total);
-        if (reportedDuration > 0) pandaVideoDurations.set(iframe, reportedDuration);
+      const t = Number(data.currentTime);
+      if (!Number.isFinite(t)) return;
 
-        const duration = pandaVideoDurations.get(iframe);
-        const currentTime = Number(data.currentTime);
-        if (duration > 0 && Number.isFinite(currentTime) && currentTime >= duration - PANDA_UNLOCK_BEFORE_END) {
+      if (data.message === 'panda_timeupdate') {
+        // Tentou pular para frente (durante a reprodução) → volta pro máximo assistido
+        if (t > state.maxWatched + PANDA_SKIP_TOLERANCE_TIMEUPDATE) {
+          pandaForceSeek(iframe, state.maxWatched);
+          return;
+        }
+        // Avanço normal: atualiza o máximo assistido
+        if (t > state.maxWatched) state.maxWatched = t;
+        // Liberou (faltam <= 3s pro fim)
+        if (state.duration > 0 && state.maxWatched >= state.duration - PANDA_COMPLETE_MARGIN) {
+          state.completed = true;
           markVideoComplete(box);
+        }
+        return;
+      }
+
+      if (data.message === 'panda_seeking' || data.message === 'panda_seeked') {
+        // Arrastou a barra pra frente além da tolerância → volta pro máximo assistido
+        if (t > state.maxWatched + PANDA_SKIP_TOLERANCE_SEEK) {
+          pandaForceSeek(iframe, state.maxWatched);
         }
       }
     }
@@ -18188,11 +18270,6 @@
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
-
-      // Show progress warning on first visit (only from slide 0)
-      if (currentSlide === 0 && !localStorage.getItem('nr11_progress_accepted')) {
-        setTimeout(openProgressWarning, 350);
-      }
     }
 
     function tryShowTutorialModal() {
@@ -18210,21 +18287,6 @@
 
     tryShowTutorialModal();
     updateTutorialButtonVisibility();
-
-    /* ── Progress Warning Modal ── */
-    function openProgressWarning() {
-      const m = document.getElementById('progressWarningModal');
-      if (!m) return;
-      m.classList.add('pw-open');
-      document.body.style.overflow = 'hidden';
-    }
-    function acceptProgressWarning() {
-      const m = document.getElementById('progressWarningModal');
-      if (!m) return;
-      m.classList.remove('pw-open');
-      document.body.style.overflow = '';
-      localStorage.setItem('nr11_progress_accepted', '1');
-    }
 
     /* ZOOM MODAL FUNCTIONS */
     function openImgModal(src) {
@@ -19447,171 +19509,6 @@
     <img class="modal-content" id="modalImg">
   </div>
   <div id="notification">Termine de assistir o vídeo para avançar</div>
-
-  <!-- ── MODAL: Aviso de Progresso (Premium) ── -->
-  <style>
-    @keyframes pw-slide-up  { from { transform:translateY(32px) scale(0.97); opacity:0 } to { transform:translateY(0) scale(1); opacity:1 } }
-    @keyframes pw-pulse-ring { 0% { box-shadow:0 0 0 0 rgba(255,160,0,0.55); } 70% { box-shadow:0 0 0 14px rgba(255,160,0,0); } 100% { box-shadow:0 0 0 0 rgba(255,160,0,0); } }
-    @keyframes pw-border-glow { 0%,100% { opacity:.55 } 50% { opacity:1 } }
-    .pw-overlay {
-      position:fixed; inset:0; z-index:99999;
-      background:rgba(4,12,11,0.88);
-      backdrop-filter:blur(14px) saturate(1.4);
-      display:flex; align-items:center; justify-content:center;
-      opacity:0; pointer-events:none;
-      transition:opacity 0.4s ease;
-      padding:20px; box-sizing:border-box;
-    }
-    .pw-overlay.pw-open { opacity:1; pointer-events:all; }
-    .pw-glow-wrap {
-      position:relative; max-width:540px; width:100%;
-      border-radius:26px; display:none;
-    }
-    .pw-overlay.pw-open .pw-glow-wrap {
-      display:block;
-      animation:pw-slide-up 0.45s cubic-bezier(.22,.68,0,1.2) forwards;
-    }
-    .pw-glow-wrap::before {
-      content:''; position:absolute; inset:-2px; border-radius:27px;
-      background:conic-gradient(from 90deg, #17c3b2 0deg, #129588 80deg, #ffc837 160deg, #ff9500 200deg, #17c3b2 280deg, #0ed8c5 360deg);
-      opacity:0.65; animation:pw-border-glow 3s ease infinite; z-index:0;
-    }
-    .pw-glow-wrap::after {
-      content:''; position:absolute; inset:0; border-radius:26px;
-      background:linear-gradient(145deg, #0d1e1c 0%, #081412 100%); z-index:1;
-    }
-    .pw-box {
-      position:relative; z-index:2; padding:36px 32px 30px;
-      border-radius:26px; overflow:hidden;
-    }
-    .pw-box::before {
-      content:''; position:absolute; top:-60px; right:-40px;
-      width:220px; height:220px;
-      background:radial-gradient(circle, rgba(23,195,178,0.12) 0%, transparent 70%);
-      pointer-events:none;
-    }
-    .pw-icon-wrap {
-      width:68px; height:68px; border-radius:20px;
-      background:linear-gradient(135deg, #ff9500 0%, #ff5f00 100%);
-      display:flex; align-items:center; justify-content:center;
-      font-size:32px; margin-bottom:22px;
-      animation:pw-pulse-ring 2.2s ease-out infinite; flex-shrink:0;
-    }
-    .pw-title { font-family:var(--font-h,'Barlow',sans-serif); font-size:26px; font-weight:900; color:#fff; margin-bottom:6px; line-height:1.15; }
-    .pw-title span { background:linear-gradient(90deg,#17c3b2,#0ed8c5); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-    .pw-subtitle { font-family:var(--font-p,'Inter',sans-serif); font-size:14.5px; color:rgba(255,255,255,0.48); margin-bottom:26px; line-height:1.5; }
-    .pw-items { display:flex; flex-direction:column; gap:10px; margin-bottom:24px; }
-    .pw-item {
-      display:flex; align-items:flex-start; gap:14px;
-      border-radius:14px; padding:14px 16px;
-      position:relative; overflow:hidden;
-    }
-    .pw-item::before {
-      content:''; position:absolute; inset:0; border-radius:14px;
-      background:rgba(255,255,255,0.025); border:1px solid rgba(255,255,255,0.07);
-    }
-    .pw-chip { width:40px; height:40px; border-radius:11px; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:18px; position:relative; z-index:1; }
-    .pw-chip.orange { background:linear-gradient(135deg,rgba(255,149,0,0.18),rgba(255,80,0,0.12)); border:1px solid rgba(255,149,0,0.3); box-shadow:0 4px 12px rgba(255,100,0,0.2); }
-    .pw-chip.teal   { background:linear-gradient(135deg,rgba(23,195,178,0.18),rgba(10,160,148,0.12)); border:1px solid rgba(23,195,178,0.3); box-shadow:0 4px 12px rgba(23,195,178,0.2); }
-    .pw-chip.purple { background:linear-gradient(135deg,rgba(150,80,255,0.18),rgba(100,50,200,0.12)); border:1px solid rgba(150,80,255,0.3); box-shadow:0 4px 12px rgba(120,60,220,0.2); }
-    .pw-item-body { position:relative; z-index:1; }
-    .pw-item-title { font-family:var(--font-h,'Barlow',sans-serif); font-size:13px; font-weight:800; color:#fff; margin-bottom:3px; letter-spacing:0.02em; }
-    .pw-item-desc { font-family:var(--font-p,'Inter',sans-serif); font-size:13px; color:rgba(255,255,255,0.62); line-height:1.5; }
-    .pw-item-desc em { color:#ffc837; font-style:normal; font-weight:700; }
-    .pw-divider { height:1px; margin:20px 0; background:linear-gradient(90deg,transparent 0%,rgba(23,195,178,0.3) 50%,transparent 100%); }
-    .pw-checkbox-row {
-      display:flex; align-items:center; gap:12px; margin-bottom:18px; cursor:pointer;
-      padding:14px 16px; border-radius:14px; border:1px solid rgba(255,255,255,0.07);
-      background:rgba(255,255,255,0.025); transition:background 0.2s,border-color 0.2s;
-      -webkit-tap-highlight-color:transparent; user-select:none;
-    }
-    .pw-checkbox-row:hover { background:rgba(23,195,178,0.06); border-color:rgba(23,195,178,0.2); }
-    .pw-checkbox {
-      width:22px; height:22px; border-radius:7px; flex-shrink:0;
-      border:2px solid rgba(255,255,255,0.2);
-      display:flex; align-items:center; justify-content:center;
-      transition:all 0.25s cubic-bezier(.22,.68,0,1.5);
-      background:rgba(255,255,255,0.03);
-    }
-    .pw-checkbox.checked {
-      background:linear-gradient(135deg,#17c3b2,#0ed8c5); border-color:#17c3b2;
-      box-shadow:0 0 0 4px rgba(23,195,178,0.2),0 4px 12px rgba(23,195,178,0.4);
-      transform:scale(1.1);
-    }
-    .pw-checkbox.checked::after { content:'✓'; color:#fff; font-size:13px; font-weight:900; line-height:1; }
-    .pw-checkbox-label { font-family:var(--font-p,'Inter',sans-serif); font-size:13.5px; color:rgba(255,255,255,0.72); line-height:1.45; }
-    .pw-btn {
-      width:100%; padding:16px;
-      background:linear-gradient(90deg,#17c3b2 0%,#0ed8c5 40%,#17c3b2 80%,#129588 100%);
-      background-size:200% auto; border:none; border-radius:15px;
-      font-family:var(--font-h,'Barlow',sans-serif); font-size:16px; font-weight:900; letter-spacing:0.03em;
-      color:#fff; cursor:pointer;
-      box-shadow:0 10px 30px rgba(23,195,178,0.45),0 2px 8px rgba(0,0,0,0.3);
-      transition:background-position 0.4s,transform 0.15s,box-shadow 0.2s,opacity 0.2s;
-      -webkit-tap-highlight-color:transparent;
-      display:flex; align-items:center; justify-content:center; gap:10px;
-    }
-    .pw-btn:not([disabled]):hover { background-position:right center; transform:translateY(-2px); box-shadow:0 14px 38px rgba(23,195,178,0.55),0 4px 14px rgba(0,0,0,0.4); }
-    .pw-btn:not([disabled]):active { transform:scale(0.97); }
-    .pw-btn[disabled] { opacity:0.28; cursor:not-allowed; background:rgba(255,255,255,0.08); box-shadow:none; }
-    .pw-btn-icon { font-size:18px; }
-    @media (max-width:480px) {
-      .pw-box { padding:26px 18px 22px; }
-      .pw-title { font-size:22px; }
-      .pw-item-desc { font-size:12.5px; }
-    }
-  </style>
-
-  <div id="progressWarningModal" class="pw-overlay" role="dialog" aria-modal="true" aria-labelledby="pwTitle">
-    <div class="pw-glow-wrap" onclick="event.stopPropagation()">
-      <div class="pw-box">
-        <div class="pw-icon-wrap">⚠️</div>
-        <div class="pw-title" id="pwTitle">Atenção ao <span>seu Progresso</span></div>
-        <p class="pw-subtitle">Leia com atenção antes de iniciar o treinamento.</p>
-        <div class="pw-items">
-          <div class="pw-item">
-            <div class="pw-chip orange">💾</div>
-            <div class="pw-item-body">
-              <div class="pw-item-title">Progresso não salvo</div>
-              <p class="pw-item-desc">Se sair do treinamento ou fechar o navegador, <em>todo o avanço será perdido</em> e você precisará recomeçar do início.</p>
-            </div>
-          </div>
-          <div class="pw-item">
-            <div class="pw-chip teal">🎯</div>
-            <div class="pw-item-body">
-              <div class="pw-item-title">Conclua em uma única sessão</div>
-              <p class="pw-item-desc">Complete o treinamento sem interrupções para que o certificado seja gerado corretamente ao final.</p>
-            </div>
-          </div>
-          <div class="pw-item">
-            <div class="pw-chip purple">🔒</div>
-            <div class="pw-item-body">
-              <div class="pw-item-title">Mantenha a aba aberta</div>
-              <p class="pw-item-desc">Deixe esta aba ativa durante todo o treinamento para não perder o progresso.</p>
-            </div>
-          </div>
-        </div>
-        <div class="pw-divider"></div>
-        <label class="pw-checkbox-row" onclick="pwToggleCheck()">
-          <div class="pw-checkbox" id="pw-checkbox"></div>
-          <span class="pw-checkbox-label">Li e entendi que ao sair do treinamento meu progresso será perdido.</span>
-        </label>
-        <button class="pw-btn" id="pw-accept-btn" onclick="acceptProgressWarning()" disabled>
-          <span class="pw-btn-icon">🚀</span> Entendi e Aceito — Iniciar Treinamento
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function pwToggleCheck() {
-      const cb  = document.getElementById('pw-checkbox');
-      const btn = document.getElementById('pw-accept-btn');
-      if (!cb || !btn) return;
-      cb.classList.toggle('checked');
-      btn.disabled = !cb.classList.contains('checked');
-    }
-  </script>
 
 </body>
 
